@@ -209,16 +209,133 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-8">
+            <div class="row my-4">
+                <div class="col d-none"></div>
+                <div class="col-12">
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="sites" role="tabpanel" aria-labelledby="list-sites">1</div>
-                        <div class="tab-pane fade" id="redes-sociais" role="tabpanel" aria-labelledby="list-profile-list">2</div>
-                        <div class="tab-pane fade" id="fotos" role="tabpanel" aria-labelledby="list-messages-list">.3.</div>
+                        <!-- SITES CONTENT -->
+                        <div class="tab-pane fade show active" id="sites" role="tabpanel" aria-labelledby="list-sites">
+                            <div class="row">
+                                <?php 
+                                    $my_args_depo = array(
+                                        'post_type' => 'portfolio',
+                                        'posts_per_page' => -1,
+                                        'category_name' => 'principal-home',
+                                        'order' => 'asc'
+                                    );
+
+                                    $my_query_depo = new WP_Query($my_args_depo);
+                                    
+                                    if($my_query_depo->have_posts()) : 
+                                    while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                                ?>
+
+                                    <div class="col-md-3 col-6 mb-3 text-center">
+                                        <article class="portfolio__box">
+                                            <a href="http://shbrasilsaudepe.com.br" target="_blank" rel="noopener">
+                                                <header>
+                                                    <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                                    <div class="card-overlay">
+                                                        <h4>Landing Page</h4>
+                                                        
+
+                                                        <?php 
+                                                            $categoria = get_the_category();
+                                                            $nomeCategoria = $categoria[0]->cat_name;
+                                                            echo $nomeCategoria;
+                                                        ?>
+
+                                                    </div>
+                                                </header>
+
+                                                
+
+                                                <footer>
+                                                    <h4><?php the_title(); ?></h4>
+                                                </footer>
+                                            </a>
+                                        </article>
+                                    </div>
+
+                                <?php endwhile; ?>
+
+                                <?php else : get_404_template(); endif; ?>
+                                <?php wp_reset_query(); ?>
+
+                            </div>
+                        </div>
+
+                        <!-- SOCIAL CONTENT -->
+                        <div class="tab-pane fade" id="redes-sociais" role="tabpanel" aria-labelledby="list-social">
+                            <div class="row">
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <article class="portfolio__box">
+                                        <a href="http://shbrasilsaudepe.com.br" target="_blank" rel="noopener">
+                                            <header>
+                                                <img src="img/portfolio/sites/saude/shbrasil.png" alt="Pagina da SH Brasil" class="img-fluid card-img">
+                                                <div class="card-overlay">
+                                                    <h4>Landing Page</h4>
+                                                </div>
+                                            </header>
+
+                                            <footer>
+                                                <h4>SH Brasil</h4>
+                                            </footer>
+                                        </a>
+                                    </article>
+                                </div>
+
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <article class="portfolio__box">
+                                        <a href="http://shbrasilsaudepe.com.br" target="_blank" rel="noopener">
+                                            <header>
+                                                <img src="img/portfolio/sites/saude/shbrasil.png" alt="Pagina da SH Brasil" class="img-fluid card-img">
+                                                <div class="card-overlay">
+                                                    <h4>Landing Page</h4>
+                                                </div>
+                                            </header>
+
+                                            <footer>
+                                                <h4>SH Brasil</h4>
+                                            </footer>
+                                        </a>
+                                    </article>
+                                </div>
+
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <h2>hey adhuasd</h2>
+                                </div>
+
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <h2>hey adhuasd</h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FOTOS CONTENT -->
+                        <div class="tab-pane fade" id="fotos" role="tabpanel" aria-labelledby="list-fotos">
+                            <div class="row">
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <h2>hey adhuasd</h2>
+                                </div>
+
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <h2>hey adhuasd</h2>
+                                </div>
+
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <h2>hey adhuasd</h2>
+                                </div>
+
+                                <div class="col-md-3 col-6 mb-3 text-center">
+                                    <h2>hey adhuasd</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
