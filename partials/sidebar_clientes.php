@@ -9,21 +9,21 @@
         </header>
 
         <ul>
-            <li><a href="#">Alimentação</a></li>
-            <li><a href="#">Associações</a></li>
-            <li><a href="#">Comércio</a></li>
-            <li><a href="#">Concessionárias</a></li>
-            <li><a href="#">Construtoras</a></li>
-            <li><a href="#">Consultorias</a></li>
-            <li><a href="#">Educação</a></li>
-            <li><a href="#">Entretenimento</a></li>
-            <li><a href="#">Indústria</a></li>
-            <li><a href="#">Jurídico</a></li>
-            <li><a href="#">Saúde</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Telecom</a></li>
-            <li><a href="#">Transportadora</a></li>
-            <li><a href="#">Turismo</a></li>
+            <li><a href="#alimentacao">Alimentação</a></li>
+            <li><a href="#associacao">Associações</a></li>
+            <li><a href="#comercio">Comércio</a></li>
+            <li><a href="#construtoras">Concessionárias</a></li>
+            <li><a href="#construtoras">Construtoras</a></li>
+            <li><a href="#consultorias">Consultorias</a></li>
+            <li><a href="#educacao">Educação</a></li>
+            <li><a href="#entretenimento">Entretenimento</a></li>
+            <li><a href="#industria">Indústria</a></li>
+            <li><a href="#juridico">Jurídico</a></li>
+            <li><a href="#saude">Saúde</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#telecom">Telecom</a></li>
+            <li><a href="#transportadora">Transportadora</a></li>
+            <li><a href="#turismo">Turismo</a></li>
         </ul>
     </div>
 </div>
