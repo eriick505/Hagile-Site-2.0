@@ -248,7 +248,8 @@
                 ?>
 
                     <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                        <?php $image = get_field('imagem_para_home_principal'); ?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </div>
 
                 <?php endwhile; ?>
