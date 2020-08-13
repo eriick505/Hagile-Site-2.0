@@ -405,7 +405,6 @@ p {
     background-position: center bottom;
 }
 
-
 .creativeProactive header h2 {
     font-size: 3.2rem;
     color: var(--color-alt-blue);
@@ -418,6 +417,82 @@ p {
 .creativeProactive .creativeProactive__list li i {
     font-size: 1.8rem;
     color: var(--color-alt-blue);
+}
+
+
+/* 
+//
+//
+// PORTFOLIO
+// */
+.portfolio header h2 {
+    color: var(--color-alt-blue);
+    font-size: 3.2rem;
+}
+
+
+.portfolio .list-group li {
+    width: 33%;
+}
+
+.portfolio .list-group li:nth-child(2) {
+    margin: 0 1.3rem;
+}
+
+.portfolio .list-group .list-group-item {
+    align-items: center;
+    border-radius: 1rem;
+    border: 0;
+    box-shadow: inset 2px 2px 13px 1px rgba(3, 3, 3, 0.08);
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    justify-content: center;
+    padding: 1.4rem 0.4rem;
+    width: auto;
+}
+
+.portfolio .list-group .list-group-item.active {
+    background-color: var(--color-alt-blue);
+    box-shadow: var(--box-shadow);
+}
+
+.portfolio .list-group .list-group-item span {
+    color: #007bff4f;
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.portfolio .list-group .list-group-item.active span {
+    color: var(--white);
+}
+
+.portfolio .list-group .list-group-item svg {
+    fill: #007bff4f;
+    height: 5rem;
+    margin-bottom: 0.7rem;
+    width: 5rem;
+}
+
+.portfolio .list-group .list-group-item.active svg {
+    fill: var(--white);
+}
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) { 
+    .portfolio .list-group li {
+        width: auto;
+    }
+
+    .portfolio .list-group li:nth-child(2) {
+        margin: 0 1.8rem;
+    }
+
+    .portfolio .list-group .list-group-item {
+        width: 160px;
+    }
 }
 
 
@@ -526,7 +601,6 @@ p {
     font-size: 1.6rem;
     text-align: center;
 }
-
 
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) { 
@@ -649,6 +723,7 @@ p {
     }
 }
 
+/* DEV BY */
 .nos {
     background-color: var(--color-alt-blue);
     color: var(--white);
