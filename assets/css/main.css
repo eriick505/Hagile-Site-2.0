@@ -89,10 +89,6 @@ p {
     width: 100%;
 }
 
-.cursiveTxt header {
-    margin-bottom: 1.6rem;
-}
-
 .cursiveTxt header h2 {
     font-family: var(--font-fredoka);
 }
@@ -481,6 +477,50 @@ p {
     fill: var(--white);
 }
 
+.portfolio .portfolio__box {
+    background-color: var(--white);
+    border: 1px solid #eeeeee;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.portfolio .portfolio__box header {
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio .portfolio__box {
+    transition: var(--transition2s);
+}
+
+.portfolio .portfolio__box .box-overlay {
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.33);
+    color: var(--white);
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: var(--transition2s);
+    width: 100%;
+    z-index: 1;
+}
+
+.portfolio .portfolio__box footer {
+    padding: 10px 0;
+}
+
+.portfolio .portfolio__box footer h4 {
+    color: var(--color-dark);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) { 
     .portfolio .list-group li {
@@ -493,6 +533,23 @@ p {
 
     .portfolio .list-group .list-group-item {
         width: 160px;
+    }
+
+    .portfolio .list-group .list-group-item:hover {
+        background-color: #b1e3fc;
+    }
+
+    .portfolio .list-group .list-group-item.active:hover {
+        background-color: var(--color-alt-blue);
+    }
+
+    .portfolio .portfolio__box:hover .box-overlay {
+        top: -126px;
+    }
+
+    .portfolio .portfolio__box:hover {
+        transform: scale(1.2);
+        transition: var(--transition2s);
     }
 }
 

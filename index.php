@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row my-5 align-items-center">
                 <div class="col-lg-6 order-1 order-lg-0">
-                    <header>
+                    <header class="mb-4">
                         <h2>Como a Hagile pode <span>impulsionar suas vendas?</span></h2>
                     </header>
 
@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 text-center mb-5">
-                    <header>
+                    <header class="mb-4">
                         <h2>O que nós fazemos</h2>
                     </header>
                 </div>
@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="col-lg-5 mt-5 mt-lg-0">
-                    <header>
+                    <header class="mb-4">
                         <h2>Profissionais altamente criativos e proativos!</h2> 
                     </header>
                     <ul class="creativeProactive__list">
@@ -161,7 +161,7 @@
         <div class="container">
             <div class="row py-4 justify-content-center">
                 <div class="col-lg-8 col-md-12 mb-md-5 mb-3 text-center">
-                    <header>
+                    <header class="mb-4">
                         <h2>Portfólio</h2>
                         <p>Conheça o nosso portfólio desenvolvido durante nossos mais de 20 anos de experiência.</p>
                     </header>
@@ -220,7 +220,7 @@
                                     $my_args_depo = array(
                                         'post_type' => 'portfolio',
                                         'posts_per_page' => -1,
-                                        'category_name' => 'principal-home',
+                                        'category_name' => 'site-institucional+principal-home',
                                         'order' => 'asc'
                                     );
 
@@ -230,32 +230,22 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                    <div class="col-md-3 col-6 mb-3 text-center">
-                                        <article class="portfolio__box">
-                                            <a href="http://shbrasilsaudepe.com.br" target="_blank" rel="noopener">
-                                                <header>
-                                                    <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                    <div class="card-overlay">
-                                                        <h4>Landing Page</h4>
-                                                        
+                                        <div class="col-md-3 col-12 mb-4 text-center">
+                                            <article class="portfolio__box">
+                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
+                                                    <header>
+                                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                                        <div class="box-overlay">
+                                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                                        </div>
+                                                    </header>
 
-                                                        <?php 
-                                                            $categoria = get_the_category();
-                                                            $nomeCategoria = $categoria[0]->cat_name;
-                                                            echo $nomeCategoria;
-                                                        ?>
-
-                                                    </div>
-                                                </header>
-
-                                                
-
-                                                <footer>
-                                                    <h4><?php the_title(); ?></h4>
-                                                </footer>
-                                            </a>
-                                        </article>
-                                    </div>
+                                                    <footer>
+                                                        <h4><?php the_title(); ?></h4>
+                                                    </footer>
+                                                </a>
+                                            </article>
+                                        </div>
 
                                 <?php endwhile; ?>
 
@@ -268,71 +258,95 @@
                         <!-- SOCIAL CONTENT -->
                         <div class="tab-pane fade" id="redes-sociais" role="tabpanel" aria-labelledby="list-social">
                             <div class="row">
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="http://shbrasilsaudepe.com.br" target="_blank" rel="noopener">
-                                            <header>
-                                                <img src="img/portfolio/sites/saude/shbrasil.png" alt="Pagina da SH Brasil" class="img-fluid card-img">
-                                                <div class="card-overlay">
-                                                    <h4>Landing Page</h4>
-                                                </div>
-                                            </header>
+                                <?php 
+                                    $my_args_depo = array(
+                                        'post_type' => 'portfolio',
+                                        'posts_per_page' => -1,
+                                        'category_name' => 'redes-sociais+principal-home',
+                                        'order' => 'asc'
+                                    );
 
-                                            <footer>
-                                                <h4>SH Brasil</h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                                    $my_query_depo = new WP_Query($my_args_depo);
+                                    
+                                    if($my_query_depo->have_posts()) : 
+                                    while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                                ?>
 
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="http://shbrasilsaudepe.com.br" target="_blank" rel="noopener">
-                                            <header>
-                                                <img src="img/portfolio/sites/saude/shbrasil.png" alt="Pagina da SH Brasil" class="img-fluid card-img">
-                                                <div class="card-overlay">
-                                                    <h4>Landing Page</h4>
-                                                </div>
-                                            </header>
+                                        <div class="col-md-3 col-12 mb-3 text-center">
+                                            <article class="portfolio__box">
+                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
+                                                    <header>
+                                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                                        <div class="box-overlay">
+                                                            <?php 
+                                                                $categoria = get_the_category();
+                                                                $nomeCategoria = $categoria[0]->cat_name;
+                                                            ?>
+                                                            <span>Rede Social</span>
+                                                        </div>
+                                                    </header>
 
-                                            <footer>
-                                                <h4>SH Brasil</h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                                                    <footer>
+                                                        <h4><?php the_title(); ?></h4>
+                                                    </footer>
+                                                </a>
+                                            </article>
+                                        </div>
 
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <h2>hey adhuasd</h2>
-                                </div>
+                                <?php endwhile; ?>
 
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <h2>hey adhuasd</h2>
-                                </div>
+                                <?php else : get_404_template(); endif; ?>
+                                <?php wp_reset_query(); ?>
+
                             </div>
                         </div>
                         
                         <!-- FOTOS CONTENT -->
                         <div class="tab-pane fade" id="fotos" role="tabpanel" aria-labelledby="list-fotos">
                             <div class="row">
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <h2>hey adhuasd</h2>
-                                </div>
+                                <?php 
+                                    $my_args_depo = array(
+                                        'post_type' => 'portfolio',
+                                        'posts_per_page' => -1,
+                                        'category_name' => 'fotos-e-videos+principal-home',
+                                        'order' => 'asc'
+                                    );
 
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <h2>hey adhuasd</h2>
-                                </div>
+                                    $my_query_depo = new WP_Query($my_args_depo);
+                                    
+                                    if($my_query_depo->have_posts()) : 
+                                    while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                                ?>
 
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <h2>hey adhuasd</h2>
-                                </div>
+                                        <div class="col-md-3 col-12 mb-3 text-center">
+                                            <article class="portfolio__box">
+                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
+                                                    <header>
+                                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                                        <div class="box-overlay">
+                                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                                        </div>
+                                                    </header>
 
-                                <div class="col-md-3 col-6 mb-3 text-center">
-                                    <h2>hey adhuasd</h2>
-                                </div>
+                                                    <footer>
+                                                        <h4><?php the_title(); ?></h4>
+                                                    </footer>
+                                                </a>
+                                            </article>
+                                        </div>
+
+                                <?php endwhile; ?>
+
+                                <?php else : get_404_template(); endif; ?>
+                                <?php wp_reset_query(); ?>
+
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-12 mt-5 text-center">
+                    <a href="portfolio" class="btn btn-primary btn__had">Veja o nosso portfólio completo</a>            
                 </div>
             </div>
 
@@ -366,7 +380,7 @@
 
                     <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
                         <?php $image = get_field('imagem_para_home_principal'); ?>
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <img src="<?php echo $image['url']; ?>" class="img-fluid" alt="<?php echo $image['alt']; ?>" />
                     </div>
 
                 <?php endwhile; ?>
@@ -450,7 +464,7 @@
         <div class="container">
             <div class="row my-5 align-items-center">
                 <div class="col-lg-5 col-md-12 order-lg-0 order-1">
-                    <header>
+                    <header class="mb-4">
                         <h2>E aí, <br> Vamos nessa?</h2>
                     </header>
 
