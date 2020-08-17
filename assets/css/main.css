@@ -426,6 +426,9 @@ p {
     font-size: 3.2rem;
 }
 
+.portfolio section:not(:last-child) {
+    margin-bottom: 6.5rem;
+}
 
 .portfolio .list-group li {
     width: 33%;
@@ -521,6 +524,7 @@ p {
 }
 
 
+
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) { 
     .portfolio .list-group li {
@@ -569,6 +573,10 @@ p {
 
 .clients header h2 {
     font-size: 3.2rem;
+}
+
+.clients section:not(:last-child) {
+    margin-bottom: 6.5rem;
 }
 
 

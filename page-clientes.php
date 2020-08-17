@@ -12,7 +12,7 @@
                 <!-- CONTENT -->
                 <div class="col-lg-9 col-md-8">
                     <!-- ALIMENTAÇÃO -->
-                    <section class="row mb-4" id="alimentacao">
+                    <section class="row " id="alimentacao">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -47,7 +47,7 @@
                     </section>
 
                     <!-- ASSOCIAÇÕES -->
-                    <section class="row mb-4" id="associacao">
+                    <section class="row " id="associacao">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -82,7 +82,7 @@
                     </section>
 
                      <!-- COMERCIO -->
-                    <section class="row mb-4" id="comercio">
+                    <section class="row " id="comercio">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -117,7 +117,7 @@
                     </section>
 
                     <!-- Concessionárias -->
-                     <section class="row mb-4" id="concessionarias">
+                     <section class="row " id="concessionarias">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -152,7 +152,7 @@
                     </section>
 
                     <!-- Construtoras -->
-                    <section class="row mb-4" id="construtoras">
+                    <section class="row " id="construtoras">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -187,7 +187,7 @@
                     </section>
 
                     <!-- Consultorias -->
-                    <section class="row mb-4" id="consultorias">
+                    <section class="row " id="consultorias">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -222,7 +222,7 @@
                     </section>
 
                     <!-- Educação -->
-                    <section class="row mb-4" id="educacao">
+                    <section class="row " id="educacao">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -257,7 +257,7 @@
                     </section>
 
                     <!-- Entretenimento -->
-                    <section class="row mb-4" id="entretenimento">
+                    <section class="row " id="entretenimento">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -292,7 +292,7 @@
                     </section>
 
                     <!-- Indústria -->
-                    <section class="row mb-4" id="industria">
+                    <section class="row " id="industria">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -327,7 +327,7 @@
                     </section>
 
                     <!-- Jurídico -->
-                    <section class="row mb-4" id="juridico">
+                    <section class="row " id="juridico">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -362,7 +362,7 @@
                     </section>
 
                     <!-- Saúde -->
-                    <section class="row mb-4" id="saude">
+                    <section class="row " id="saude">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -397,7 +397,7 @@
                     </section>
 
                     <!-- Serviços -->
-                    <section class="row mb-4" id="servicos">
+                    <section class="row " id="servicos">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -432,7 +432,7 @@
                     </section>
 
                     <!-- Telecom -->
-                    <section class="row mb-4" id="telecom">
+                    <section class="row " id="telecom">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -467,7 +467,7 @@
                     </section>
 
                     <!-- Transportadora -->
-                    <section class="row mb-4" id="transportadora">
+                    <section class="row " id="transportadora">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
@@ -502,7 +502,7 @@
                     </section>
 
                     <!-- Turismo -->
-                    <section class="row mb-4" id="turismo">
+                    <section class="row " id="turismo">
                         
                         <div class="col-12 text-center text-md-left">
                             <header>
