@@ -18,8 +18,8 @@
                 echo '<input type="hidden" name="post_type" value="cliente" />';
             break;
 
-            case 'portfolio':
-                echo '<input type="hidden" name="post_type" value="'.$post_slug.'" />';
+            case 'portfolios':
+                echo '<input type="hidden" name="post_type" value="portfolio" />';
             break;
 
             default:

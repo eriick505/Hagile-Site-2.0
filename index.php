@@ -346,7 +346,7 @@
                 </div>
 
                 <div class="col-12 mt-5 text-center">
-                    <a href="portfolio" class="btn btn-primary btn__had">Veja o nosso portfólio completo</a>            
+                    <a href="portfolios" class="btn btn-primary btn__had">Veja o nosso portfólio completo</a>            
                 </div>
             </div>
 

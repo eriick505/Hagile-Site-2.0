@@ -9,6 +9,7 @@
         <div class="container">
             <div class="row py-5">
 
+                <!-- CONTENT -->
                 <div class="col-lg-9 col-md-8">
                     <!-- ALIMENTAÇÃO -->
                     <section class="row mb-4" id="alimentacao">
@@ -535,7 +536,8 @@
 
                     </section>
                 </div>
-
+                
+                <!-- SIDEBAR -->
                 <?php get_template_part('partials/sidebar_clientes'); ?>
 
             </div>
