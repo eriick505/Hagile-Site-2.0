@@ -136,7 +136,7 @@
                             $my_args_depo = array(
                                 'post_type' => 'portfolio',
                                 'posts_per_page' => -1,
-                                'category_name' => 'associacao+online',
+                                'category_name' => 'associacoes+online',
                                 'order' => 'asc'
                             );
 
