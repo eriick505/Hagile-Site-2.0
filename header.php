@@ -64,7 +64,22 @@
                     </div>
 
                     <div class="col-lg-7 text-center order-0 order-lg-1 mb-5 mb-lg-0">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/img/hero-image/teste2.png" alt="ola" class="img-fluid w-75">
+                        <div class="hero__img">
+                            <div class="icon-right">
+                                <!-- man above video -->
+                                <div class="box">
+                                </div>
+
+                                <!-- woman bellow video -->
+                                <div class="box">
+                                </div>
+                            </div>
+
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/hero-image/video-hero-img.png" alt="ola" class="img-fluid w-75">
+
+                            <div class="icons-left">
+                            </div>
+                        </div>
                     </div>
                 </div>
 

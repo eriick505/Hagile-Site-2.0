@@ -12,7 +12,7 @@
             <li><a href="#alimentacao">Alimentação</a></li>
             <li><a href="#associacao">Associações</a></li>
             <li><a href="#comercio">Comércio</a></li>
-            <li><a href="#construtoras">Concessionárias</a></li>
+            <li><a href="#concessionarias">Concessionárias</a></li>
             <li><a href="#construtoras">Construtoras</a></li>
             <li><a href="#consultorias">Consultorias</a></li>
             <li><a href="#educacao">Educação</a></li>

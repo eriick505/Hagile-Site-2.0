@@ -107,6 +107,9 @@ p {
     background: -webkit-linear-gradient(top, #EAF8FF 0%, #F6F6FF 100%);
     background: -o-linear-gradient(top, #EAF8FF 0%, #F6F6FF 100%);
     background: linear-gradient(180deg, #EAF8FF 0%, #F6F6FF 100%);
+    background-image: url(../img/background/bg-hero.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
 }
 
 
@@ -115,7 +118,7 @@ p {
 //
 // NAVBAR
 // */
-.navbar {
+.header .navbar {
     padding-top: 1.5rem;
 }
 
@@ -266,6 +269,33 @@ p {
     font-size: 1.5rem;
 }
 
+.hero .hero__img {
+    position: relative;
+}
+
+.hero .hero__img .icon-right .box:first-child:after {
+    background-image: url(../img/hero-image/womans-icons.png);
+    background-size: cover;
+    bottom: -44px;
+    content: '';
+    display: inline-block;
+    height: 154px;
+    left: 56px;
+    position: absolute;
+    width: 155px;
+}
+
+.hero .hero__img .icon-right .box:last-child:after {
+    background-image: url(../img/hero-image/man-top-video-hero.png);
+    background-size: cover;
+    top: -78px;
+    content: '';
+    display: inline-block;
+    height: 126px;
+    left: 130px;
+    position: absolute;
+    width: 60px;
+}
 
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) {
@@ -275,13 +305,13 @@ p {
 
     .hero .hero__text .bg-title:after {
         background-size: 100%;
-        right: -54px;
+        right: -42px;
         top: -41px;
     }
 
     .hero .hero__text .bg-title:before {
         background-size: 100%;
-        left: -52px;
+        left: -39px;
         top: -35px;
     }
 
@@ -802,7 +832,7 @@ p {
 /* 
 //
 //
-// 404
+// 404 PAGE
 // */
 .page-404 header {
     color: var(--color-primary);
@@ -820,3 +850,56 @@ p {
 .page-404 span {
     font-size: 1.5rem;
 }
+
+
+
+/* INTERN PAGES CLIENTES/PORTFOLIO */
+.internPage .navbar {
+    background-color: var(--color-primary);
+}
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 992px) { 
+    .internPage {
+        position: relative;
+        padding-left: 24rem;
+    }
+
+    .internPage .navbar {
+        display: flex;
+        flex-direction: column;
+        height: calc(128vh - 211px);
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 20rem;
+    }
+
+    .internPage .container {
+        height: calc(128vh - 211px);
+        overflow-x: scroll;
+        padding-top: 3rem;
+    }
+
+    .internPage .container::-webkit-scrollbar { width: 4px; }
+
+    /* Fundo da barra de rolagem */
+    .internPage .container::-webkit-scrollbar-track-piece { background-color: #EEE; }
+
+    /* Cor do indicador de rolagem */
+    .internPage .container::-webkit-scrollbar-thumb:vertical,
+    .internPage .container::-webkit-scrollbar-thumb:horizontal { background-color: var(--color-primary); }
+
+    /* Cor do indicador de rolagem - ao passar o mouse */
+    .internPage .container::-webkit-scrollbar-thumb:vertical:hover,
+    .internPage .container::-webkit-scrollbar-thumb:horizontal:hover { background-color: #717171 }
+
+    .internPage .navbar .navbar-collapse {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .internPage .navbar .navbar-nav .nav-link {
+        font-size: 1.5rem;
+    }
+} 
