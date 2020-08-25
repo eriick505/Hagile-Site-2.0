@@ -337,6 +337,10 @@ p {
 //
 // HOW TO BOOSTER YOUR SALES
 // */
+.howToBoost {
+    padding: 1rem 0;
+}
+
 .howToBoost header h2 {
     font-size: 3rem;
 }
@@ -348,6 +352,10 @@ p {
 
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) { 
+    .howToBoost {
+        padding: 9rem 0;
+    }
+
     .howToBoost header h2 {
         font-size: 3.6rem;
     }
@@ -380,6 +388,7 @@ p {
     flex-direction: column;
     height: 200px;
     justify-content: center;
+    margin-bottom: 1.6rem;
     padding: 1.4rem 0.4rem;
     transition: var(--transition4s);
 }
@@ -425,7 +434,7 @@ p {
 // CREATIVE AND PROACTIVE
 // */
 .creativeProactive {
-    background-image: url(../img/sections-background/bg-employee.png);
+    background-image: url(../img/background/bg-employee.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -451,6 +460,10 @@ p {
 //
 // PORTFOLIO
 // */
+.portfolio {
+    padding: 3rem 0;
+}
+
 .portfolio header h2 {
     color: var(--color-alt-blue);
     font-size: 3.2rem;
@@ -599,6 +612,7 @@ p {
     background-repeat: no-repeat;
     background-position: right;
     color: var(--color-primary-dark);
+    padding: 3rem 0;
 }
 
 .clients header h2 {
@@ -607,6 +621,110 @@ p {
 
 .clients section:not(:last-child) {
     margin-bottom: 6.5rem;
+}
+
+
+
+/* 
+//
+//
+// AUMENTE SUAS VENDAS
+// */
+.increaseSales {
+    align-items: center;
+    background-color: #1e826c;
+    background-image: url(../img/background/bg-aumentar-vendas.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 150px;
+    color: var(--white);
+    display: flex;
+    height: auto;
+    padding: 3.6rem 0 10rem 0;
+}
+
+.increaseSales header h2 { 
+    font-size: 3.2rem;
+    text-shadow: 3px 4px 6px rgb(3 3 3 / 32%);
+}
+
+.increaseSales .increaseSales__body {
+    margin: 2.6rem 0;
+}
+
+.increaseSales .increaseSales__body .list {
+    margin-top: 2rem;
+}
+
+.increaseSales .increaseSales__body .list h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.increaseSales .increaseSales__body .list ul {
+    margin-top: 1rem;
+}
+
+.increaseSales .increaseSales__body .list ul li:not(:last-child) {
+    margin-bottom: 0.6rem;
+}
+
+.increaseSales .increaseSales__body .list ul li {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.increaseSales .increaseSales__footer a:first-child {
+    margin-bottom: 1.6rem;
+    background-color: var(--white);
+    color: #1e826c;
+}
+
+.increaseSales .increaseSales__footer a {
+    border-radius: 2.8rem;
+    border: 0.2rem solid var(--white);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.2rem 1.8rem;
+    text-align: center;
+    transition: var(--transition2s);
+}
+
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) { 
+    .increaseSales {
+        background-size: cover;
+        height: 860px;
+        padding: 1.8rem;
+    }
+    
+    .increaseSales header h2 {
+        font-size: 5.2rem;
+        line-height: 5rem;
+    }
+
+    .increaseSales .increaseSales__footer a {
+        display: inline-block;
+    }
+
+    .increaseSales .increaseSales__footer a:first-child {
+        margin-right: 1rem;
+    }
+
+    .increaseSales .increaseSales__footer a:first-child:hover {
+        background-color: #1e826c;
+        color: var(--white);
+    }
+    
+    .increaseSales .increaseSales__footer a:hover {
+        background-color: var(--white);
+        color: #1e826c;
+        transition: var(--transition2s);
+    }
 }
 
 

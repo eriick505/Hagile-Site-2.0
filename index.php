@@ -133,28 +133,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- PROFISSIONAIS CRIATIVOS  -->
-    <section class="creativeProactive cursiveTxt">
-        <div class="container">
-            <div class="row align-items-center py-5">
-                <div class="col-md-7">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/employee.png" alt="folder hagile funcionarios" class="img-fluid">
-                </div>
-
-                <div class="col-lg-5 mt-5 mt-lg-0">
-                    <header class="mb-4">
-                        <h2>Profissionais altamente criativos e proativos!</h2> 
-                    </header>
-                    <ul class="creativeProactive__list">
-                        <li><i class="far fa-hand-point-right"></i> Suas Redes Sociais mais dinâmicas e atrativas.</li>
-                        <li><i class="far fa-hand-point-right"></i> As melhores ideias para o maior alcance.</li>
-                        <li><i class="far fa-hand-point-right"></i> Estratégias criativas e precisas.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>           
 
     <!-- PORTFOLIO  -->
     <section class="portfolio cursiveTxt" id="portfolio">
@@ -353,6 +331,40 @@
         </div>
     </section>
 
+    <!-- AUMENTE SUAS VENDAS PELA INTERNET -->
+    <section class="increaseSales cursiveTxt">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <header>
+                        <h2>Aumente suas vendas utilizando a internet!</h2>
+                    </header>
+    
+                    <main class="increaseSales__body">
+                        <p>Nós estudamos seu negócio, serviço ou produto e <b>entendemos o perfil do seu público</b>. Com estes dados criamos <b>estratégias de marketing digital</b> para trazer clientes, utilizando de desenvolvimento de campanhas e geração de conteúdo, gerando maior engajamento do público para sua marca na internet.</p>
+                        <p>Através de nossas <b>estratégias de captação de Leads</b> ( possíveis clientes ), sua empresa vai ter resultado! Não importa se seu negócio é físico ou digital, todos precisam estar em constante <b>contato com seus clientes</b>. Utilizamos ferramentas digitais, chatbots, segmentação, redes sociais, sites modernos, gerenciamento de conteúdo e de redes sociais, dentre outros produtos, para que criemos ou aprimoremos funis de clientes para <b>conversão</b> de vendas diretas.</p>
+                        
+                        <div class="list">
+                            <h3>...E quais são as vantagens?!</h3>
+                            <ul>
+                                <li><i class="far fa-check-circle"></i> Atraia potenciais clientes facilmente;</li>
+                                <li><i class="far fa-check-circle"></i> Encurte o ciclo de vendas;</li>
+                                <li><i class="far fa-check-circle"></i> Melhore o processo de vendas;</li>
+                                <li><i class="far fa-check-circle"></i> Aumente probabilidade de reter e fidelizar o cliente;</li>
+                                <li><i class="far fa-check-circle"></i> Totalmente Baixo custo.</li>
+                            </ul>
+                        </div>
+                    </main>
+    
+                    <footer class="increaseSales__footer">
+                        <a href="#cincoMotivos">Mais benefícios</a>
+                        <a href="#" data-toggle="modal" data-target="#formulario">Venda mais!</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CLIENTES -->
     <section class="clients cursiveTxt" id="clientes">
         <div class="container">
@@ -395,6 +407,28 @@
             </div>
         </div>
     </section>
+    
+    <!-- PROFISSIONAIS CRIATIVOS  -->
+    <section class="creativeProactive cursiveTxt">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-md-7">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/employee.png" alt="folder hagile funcionarios" class="img-fluid">
+                </div>
+
+                <div class="col-lg-5 mt-5 mt-lg-0">
+                    <header class="mb-4">
+                        <h2>Profissionais altamente criativos e proativos!</h2> 
+                    </header>
+                    <ul class="creativeProactive__list">
+                        <li><i class="far fa-hand-point-right"></i> Suas Redes Sociais mais dinâmicas e atrativas.</li>
+                        <li><i class="far fa-hand-point-right"></i> As melhores ideias para o maior alcance.</li>
+                        <li><i class="far fa-hand-point-right"></i> Estratégias criativas e precisas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>  
 
     <!-- TESTIMONIAL -->
     <section class="testimonial cursiveTxt">
