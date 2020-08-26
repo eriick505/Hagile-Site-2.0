@@ -208,7 +208,7 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                        <div class="col-md-3 col-12 mb-4 text-center">
+                                        <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
                                             <article class="portfolio__box">
                                                 <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                                     <header>
@@ -250,7 +250,7 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                        <div class="col-md-3 col-12 mb-3 text-center">
+                                        <div class="col-lg-3 col-md-4 col-12 mb-3 text-center">
                                             <article class="portfolio__box">
                                                 <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                                     <header>
@@ -296,7 +296,7 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                        <div class="col-md-3 col-12 mb-3 text-center">
+                                        <div class="col-lg-3 col-md-4 col-12 mb-3 text-center">
                                             <article class="portfolio__box">
                                                 <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                                     <header>
@@ -428,7 +428,139 @@
                 </div>
             </div>
         </div>
-    </section>  
+    </section> 
+    
+    <!-- SITES ROBUSTOS E ATUALIZADOS -->
+    <section class="robustWebsite cursiveTxt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-0 order-1">
+                    <header>
+                        <h2>Sites robustos <br> e atualizados!</h2>
+                    </header>
+
+                    <p>O desenvolvimento de websites é um serviço bastante procurado pelas empresas que possuem a necessidade de expandir suas relações comerciais de forma simples e acessível financeiramente. Utilizando processos de “URL amigável”, “Link building”, conceitos de usabilidade, dentre outras técnicas modernas, conseguimos construir a melhor identidade digital para nossos clientes.</p>
+
+                    <p>Todos da equipe trabalham as informações dos clientes, tornando a visualização das páginas atraentes, legíveis e modernas, o que é imprescindível hoje em dia para garantir o sucesso das empresas no mercado atual.</p>
+                </div>
+
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-site.png" alt="Ilustração de um site" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- POSICIONAMENTO ESTRATEGICO -->
+    <section class="positionStrategic cursiveTxt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-0 order-1">
+                    <header>
+                        <h2>Posicionamento estratégico nas Redes Sociais!</h2>
+                    </header>
+
+                    <p>Os serviços de gerenciamento de redes sociais consistem desde a criação de conta nas grandes redes como Facebook, Twitter, Youtube, Linkedin, dentre outras; Personalização dos referidos perfis com a inserção de background, imagens, textos, etc; Confecção de fanpages e sites internos específicos para cada rede social; Estabelecimento de link entre as redes sociais e o site do cliente.</p>
+
+                    <p>Provimento contínuo com conteúdo nas redes sociais; Acompanhamento com geração de relatórios sobre tópicos, quantidade de usuários e controle de conteúdo; Monitoramento da imagem da marca na Web.</p>
+                </div>
+
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-fotos.png" alt="Ilustração de fotos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRE SEUS EVENTOS -->
+    <section class="videoRegister cursiveTxt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-0 order-1">
+                    <header>
+                        <h2>Registre seus eventos por vídeo...</h2>
+                    </header>
+
+                    <p>A filmagem de eventos é um investimento indispensável para empresas de grande porte que mantêm um cronograma de ações institucionais e promocionais durante o ano. Além de garantirem melhores resultados para os eventos em termos de divulgação e notoriedade, os vídeos profissionais também perpetuam o sucesso do evento, mantendo um arquivo da ocasião, com cenas dos melhores momentos, depoimentos e outras informações.</p>
+
+                    <p>A cobertura de eventos em vídeo também ajuda as empresas a mensurarem o alcance do evento e a satisfação do público-alvo em relação à ocasião, pois apresentam imagens reais, em diferentes ângulos e ambientes, sem deixar de lado um fato sequer.</p>
+                </div>
+
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-videos.png" alt="Ilustração de videos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRE SEUAS FOTOS -->
+    <section class="photoRegister cursiveTxt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-0 order-1">
+                    <header>
+                        <h2>... e por fotos!</h2>
+                    </header>
+
+                    <p>A maior parte das taxas de engajamento no Facebook, por exemplo, é obtida por imagens. Levantamentos feitos pela OpenView Marketing Lab revelaram que as atualizações de status com recursos visuais como vídeos e fotos causaram um engajamento muito mais forte, com um percentual acima de 180%. Impressionante, não?</p>
+                </div>
+
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-fotos.png" alt="Ilustração de fotos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fiveReasons cursiveTxt">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-5">
+                    <header>
+                        <span>5 Motivos</span>
+                        <h2>5 motivos Para Contratar a Hagile!</h2>
+                    </header>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <article class="fiveReasons__box">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon1.png" alt="Balão 1" class="img-fluid">
+                        <p>Planejamos mensalmente todo o conteúdo através da gestão de redes sociais. Acompanhamos os resultados diariamente.</p>
+                    </article>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <article class="fiveReasons__box">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon2.png" alt="Balão 2" class="img-fluid">
+                        <p>Metas do nosso trabalho: mais engajamento nas redes sociais, produção de conteúdo de valor, aumento no número de seguidores dos perfis da empresa, captação de leads através de campanhas no Facebook, Instagram e LinkedIn.</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <article class="fiveReasons__box">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon3.png" alt="Balão 3" class="img-fluid">
+                        <p>Custos transparentes: você sabe quanto pagará pelo trabalho da Hagile e pelos anúncios nas redes sociais.</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <article class="fiveReasons__box">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon4.png" alt="Balão 4" class="img-fluid">
+                        <p>A melhor tecnologia para otimizar sua campanha nas redes socias 24 horas por dia, além da validação manual periódica por um dos nossos especialistas.</p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <article class="fiveReasons__box">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon5.png" alt="Balão 5" class="img-fluid">
+                        <p>Fazemos sempre o máximo para garantir a satisfação e o retorno rápido do investimento para nossos clientes.</p>
+                    </article>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
 
     <!-- TESTIMONIAL -->
     <section class="testimonial cursiveTxt">

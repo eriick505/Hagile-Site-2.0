@@ -731,6 +731,180 @@ p {
 /* 
 //
 //
+// SITES ROBUSTOS
+// */
+.robustWebsite {
+    background-color: var(--color-alt-blue);
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.robustWebsite header {
+    margin-bottom: 2rem;
+}
+
+.robustWebsite header h2 {
+    font-size: 4.2rem;
+}
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) {
+    .robustWebsite header h2 {
+        font-size: 3.8rem;
+    }
+}
+
+/* 
+//
+//
+// SITES ROBUSTOS
+// */
+.positionStrategic {
+    background-color: #0072bc;
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.positionStrategic header {
+    margin-bottom: 2rem;
+}
+
+.positionStrategic header h2 {
+    font-size: 3.3rem;
+}
+
+/* 
+//
+//
+// SITES ROBUSTOS
+// */
+.videoRegister {
+    background-color: #005a93;
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.videoRegister header {
+    margin-bottom: 2rem;
+}
+
+.videoRegister header h2 {
+    font-size: 3rem;
+}
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) {
+    .videoRegister header h2 {
+        font-size: 4.4rem;
+    }
+}
+
+
+/* 
+//
+//
+// SITES ROBUSTOS
+// */
+.photoRegister {
+    background-color: #044f7d;
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.photoRegister header {
+    margin-bottom: 2rem;
+}
+
+.photoRegister header h2 {
+    font-size: 5.2rem;
+}
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) {
+    .photoRegister header h2 {
+        font-size: 4.2rem;
+    }
+}
+
+
+/* 
+//
+//
+// SITES ROBUSTOS
+// */
+.fiveReasons {
+    background-color: #eaf2fa;
+    background-image: url(../img/background/bg-5motivos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+}
+
+.fiveReasons header span {
+    color: var(--color-alt-blue);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.fiveReasons header h2 {
+    font-size: 3.2rem;
+    color: #4e4b4b;
+}
+
+.fiveReasons .fiveReasons__box {
+    background-color: var(--white);
+    border-radius: 2.5rem;
+    box-shadow: 2px 2px 3px rgb(3 3 3 / 4%);
+    margin-bottom: 2rem;
+    padding: 2rem 1.8rem;
+}
+
+.fiveReasons .fiveReasons__box img {
+    margin-bottom: 1.6rem;
+}
+
+.fiveReasons .fiveReasons__box p {
+    color: #716b6b;
+    display: block;
+    height: auto;
+    overflow-y: scroll;
+    padding-right: 0.2rem;
+}
+
+/* Largura da barra de rolagem */
+.fiveReasons .fiveReasons__box p::-webkit-scrollbar { width: 4px; }
+
+/* Fundo da barra de rolagem */
+.fiveReasons .fiveReasons__box p::-webkit-scrollbar-track-piece { background-color: #EEE; }
+
+/* Cor do indicador de rolagem */
+.fiveReasons .fiveReasons__box p::-webkit-scrollbar-thumb:vertical,
+.fiveReasons .fiveReasons__box p::-webkit-scrollbar-thumb:horizontal { background-color: var(--color-primary); }
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+.fiveReasons .fiveReasons__box p::-webkit-scrollbar-thumb:vertical:hover,
+.fiveReasons .fiveReasons__box p::-webkit-scrollbar-thumb:horizontal:hover { background-color: #717171; cursor: pointer; }
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) {
+    .fiveReasons {
+        padding: 6rem 0;
+    }
+
+    .fiveReasons header h2 {
+        font-size: 4.2rem;
+    }
+
+    .fiveReasons .fiveReasons__box p {
+        height: 11rem;
+    }
+}
+
+
+
+/* 
+//
+//
 // TESTIMONIAL
 // */
 .testimonial {
@@ -787,7 +961,7 @@ p {
 
 /* Cor do indicador de rolagem - ao passar o mouse */
 .testimonial .testimonial__box main::-webkit-scrollbar-thumb:vertical:hover,
-.testimonial .testimonial__box main::-webkit-scrollbar-thumb:horizontal:hover { background-color: #717171 }
+.testimonial .testimonial__box main::-webkit-scrollbar-thumb:horizontal:hover { background-color: #717171; cursor: pointer; }
 
 
 .testimonial .testimonial__box footer span {
