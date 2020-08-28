@@ -418,6 +418,7 @@ p {
         background-color: var(--white);
         color: var(--color-alt-blue);
         transition: var(--transition4s);
+        transform: translateY(-12px);
     }
 
     .whatWeDo .whatWeDo__box:hover svg  { 
@@ -899,7 +900,6 @@ p {
         height: 11rem;
     }
 }
-
 
 
 /* 
