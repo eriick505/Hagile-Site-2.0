@@ -665,7 +665,7 @@
                     </header>
                 </div>
 
-                <div class="col-lg-5 col-md-12 order-lg-0 order-1">
+                <div class="col-lg-8 col-md-12 order-lg-0 order-1">
                     <div class="testimonial__list">
 
                         <?php 
@@ -705,7 +705,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 mb-3 mb-lg-4 order-lg-1 order-0">
+                <div class="col-lg-4 mb-3 mb-lg-4 order-lg-1 order-0">
                     <div class="testimonial__hero">
                         <h3>Depoimentos de alguns de nossos clientes</h3>
                         <p>Estamos muito felizes porque temos clientes super satisfeitos.</p>

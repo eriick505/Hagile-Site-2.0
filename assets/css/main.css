@@ -108,7 +108,7 @@ p {
     background: -o-linear-gradient(top, #EAF8FF 0%, #F6F6FF 100%);
     background: linear-gradient(180deg, #EAF8FF 0%, #F6F6FF 100%);
     background-image: url(../img/background/bg-hero.png);
-    background-position: left bottom;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -300,7 +300,7 @@ p {
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) {
     .hero {
-        height: 92vh;
+        height: 850px;
     }
 
     .hero .hero__text .bg-title:after {
@@ -369,6 +369,9 @@ p {
 // */
 .whatWeDo {
     background-color: var(--color-alt-blue);
+    background-image: url(../img/background/bg-services.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 2rem 0;
 }
 
@@ -1002,11 +1005,19 @@ p {
 
     .testimonial .testimonial__hero h3 {
         font-size: 2.8rem;
+        text-align: left;
+    }
+
+    
+    .testimonial .testimonial__hero p {
+        text-align: left;
     }
 
     .testimonial .testimonial__box main {
         height: 13.5rem;
     }
+
+    
 }
 
 

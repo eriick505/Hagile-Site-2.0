@@ -51,63 +51,7 @@
     <!-- ADD FOOTER WORDPRESS -->
     <?php wp_footer(); ?>
 
-    <script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-    <script>
-      $(function(){
-        $('.testimonial__list').slick({
-            infinite: true,
-            slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            centerMode: true,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: false,
-            responsive: [
-                {
-                  breakpoint: 768,
-                  settings: {
-                    centerMode: false,
-                  }
-                },
-                {
-                  breakpoint: 600,
-                  settings: {
-                      centerMode: false,
-                  }
-                },
-                {
-                  breakpoint: 460,
-                  settings: {
-                    centerMode: false,
-                  }
-                }
-            ]
-        });
-
-        function rescaleCaptcha(){
-          var width = $('.g-recaptcha').parent().width();
-          var scale;
-          if (width < 302) {
-            scale = width / 302;
-          } else{
-            scale = 1.0; 
-          }
-
-          $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-          $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-          $('.g-recaptcha').css('transform-origin', '0 0');
-          $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-        }
-
-        rescaleCaptcha();
-        $( window ).resize(function() { rescaleCaptcha(); });
-
-      });
-    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
     
   </body>
 </html>

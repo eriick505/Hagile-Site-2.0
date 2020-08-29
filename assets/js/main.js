@@ -6,31 +6,57 @@ $(document).ready(function () {
     })
 
 
-    // SMOOTH SCROLL 
-    $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
-      
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-      
-            // Store hash
-            var hash = this.hash;
-      
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function(){
-      
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            });
-          } // End if
-        });
-      });
+    $('.testimonial__list').slick({
+        infinite: true,
+        slidesToShow: 2,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        centerMode: true,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                centerMode: false,
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                  centerMode: false,
+                  slidesToShow: 1,
+              }
+            },
+            {
+              breakpoint: 460,
+              settings: {
+                centerMode: false,
+                slidesToShow: 1,
+              }
+            }
+        ]
+    });
+
+    // RESPONSIVE RECAPTCHA 
+    function rescaleCaptcha(){
+      var width = $('.g-recaptcha').parent().width();
+      var scale;
+      if (width < 302) {
+        scale = width / 302;
+      } else{
+        scale = 1.0; 
+      }
+
+      $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+      $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+      $('.g-recaptcha').css('transform-origin', '0 0');
+      $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+    }
+    rescaleCaptcha();
+    $( window ).resize(function() { rescaleCaptcha(); });
 
 
 }); 
