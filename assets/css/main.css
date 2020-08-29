@@ -12,6 +12,7 @@
     --color-light: #f7f7f7;
     --color-dark: #1e272e;
     --color-green: #0ba360;
+    --color-gray: #4e4b4b;
 
     --font-fredoka: 'Fredoka One', cursive;
     --font-montserrat: 'Montserrat', sans-serif;
@@ -831,10 +832,90 @@ p {
 }
 
 
+
 /* 
 //
 //
-// SITES ROBUSTOS
+// 5 MOTIVOS
+// */
+.blog header h2 {
+    color: var(--color-alt-blue);
+    font-size: 3.6rem;
+}
+
+.blog header span {
+    color: var(--color-gray);
+    font-size: 1.8rem;
+}
+
+.blog .blog__card {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 1.2rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.8rem 1.2rem;
+}
+
+.blog .blog__card .blog__thumbnail {
+    flex: 0 0 100%;
+    margin-bottom: 1.6rem;
+}
+
+.blog .blog__card .blog__body {
+    flex: 0 0 100%;
+}
+
+.blog .blog__card .blog__body span {
+    font-size: 1.4rem;
+    color: rgb(151, 151, 151);
+}
+
+
+.blog .blog__card .blog__body a h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-alt-blue);
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.blog .blog__card .blog__body p {
+    font-size: 1.6rem;
+}
+
+.blog .blog__card .blog__body .more {
+    font-size: 1.6rem;
+    color: var(--color-primary-dark);
+}
+
+
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) {
+    .blog .blog__card {
+        flex-direction: row;
+    }
+
+    .blog .blog__card .blog__thumbnail {
+        flex: 0 0 50%;
+    }
+    
+    .blog .blog__card .blog__body {
+        flex: 0 0 50%;
+    }
+}
+
+
+
+
+/* 
+//
+//
+// 5 MOTIVOS
 // */
 .fiveReasons {
     background-color: #eaf2fa;
@@ -852,7 +933,7 @@ p {
 
 .fiveReasons header h2 {
     font-size: 3.2rem;
-    color: #4e4b4b;
+    color: var(--color-gray);
 }
 
 .fiveReasons .fiveReasons__box {
@@ -868,7 +949,7 @@ p {
 }
 
 .fiveReasons .fiveReasons__box p {
-    color: #716b6b;
+    color: var(--color-gray);
     display: block;
     height: auto;
     overflow-y: scroll;

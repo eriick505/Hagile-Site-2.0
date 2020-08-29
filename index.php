@@ -583,7 +583,7 @@
         </div>
     </section>
 
-    <!-- REGISTRE SEUAS FOTOS -->
+    <!-- REGISTRE SUAS FOTOS -->
     <section class="photoRegister cursiveTxt">
         <div class="container">
             <div class="row align-items-center">
@@ -597,6 +597,39 @@
 
                 <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-fotos.png" alt="Ilustração de fotos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="blog cursiveTxt">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-12 text-center">
+                    <header>
+                        <h2>Blog</h2>
+                        <p>Confira todas as notícias da Hagile no meio digital</p>
+                    </header>
+                </div>
+
+                <div class="col-md-8">
+                    <article class="blog__card">
+                        <div class="blog__thumbnail">
+                            <a href="#">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/background/bg-aumentar-vendas.png" alt="Ilustração de fotos" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="blog__body">
+                            <span>Publicado em ago 13, 2020</span>
+                            <a href="#">
+                                <h4>Porque sua empresa precisa investir em redes sociais?</h4>
+                            </a>
+                            <p>Investir em redes sociais ou não é uma dúvida que assombra muitos empreendedores. Isso porque, ninguém quer perder tempo com estratégias que não oferecem resultados, não é mesmo? No entanto, só para se ter uma ideia,...</p>
+                            <a class="more" href="#">Saiba mais</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>

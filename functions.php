@@ -6,6 +6,7 @@
     wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css');
     wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.css');
     wp_enqueue_style( 'slickTheme', get_template_directory_uri() . '/assets/css/slick-theme.css');
+    wp_enqueue_style( 'lity', get_template_directory_uri() . '/assets/css/lity.css');
     wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css');
   }
   add_action('wp_enqueue_scripts', 'add_estilos_css');
@@ -17,6 +18,7 @@
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script('lity', get_template_directory_uri() . '/assets/js/lity.js', array ( 'jquery' ), 1.1, true);
   }
   add_action('wp_enqueue_scripts', 'add_scripts_js');
 
