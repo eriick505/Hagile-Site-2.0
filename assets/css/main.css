@@ -838,6 +838,10 @@ p {
 //
 // 5 MOTIVOS
 // */
+.blog {
+    padding: 3rem 0;
+}
+
 .blog header h2 {
     color: var(--color-alt-blue);
     font-size: 3.6rem;
@@ -849,38 +853,51 @@ p {
 }
 
 .blog .blog__card {
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 1.2rem;
+    align-items: flex-end;
+    background-color: #00000082;
+    background-image: url(https://hagile.com.br/blog/wp-content/uploads/2020/08/4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1.8rem 1.2rem;
+    height: 40rem;
+    justify-content: flex-end;
+    position: relative;
+    transition: var(--transition2s);
 }
 
-.blog .blog__card .blog__thumbnail {
-    flex: 0 0 100%;
-    margin-bottom: 1.6rem;
+.blog .blog__card .overlay {
+    background-color: #00000014;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .blog .blog__card .blog__body {
-    flex: 0 0 100%;
+    background: linear-gradient(0deg, rgb(4 79 125 / 88%) 78%, rgb(0 0 0 / 0%) 100%);
+    padding: 2.8rem 1.4rem;
+    width: 100%;
+    z-index: 1;
 }
 
 .blog .blog__card .blog__body span {
-    font-size: 1.4rem;
-    color: rgb(151, 151, 151);
+    color: var(--white);
+    font-size: 1.2rem;
 }
 
 
 .blog .blog__card .blog__body a h4 {
-    font-size: 1.8rem;
+    border-bottom: 1px solid #ececec;
+    color: var(--white);
+    font-size: 1.6rem;
     font-weight: 600;
-    color: var(--color-alt-blue);
-    border-bottom: 1px solid var(--color-gray);
+    margin-bottom: 1.4rem;
     padding-bottom: 0.8rem;
-    margin-bottom: 0.8rem;
 }
 
 .blog .blog__card .blog__body p {
@@ -888,27 +905,34 @@ p {
 }
 
 .blog .blog__card .blog__body .more {
+    background-color: var(--color-alt-blue);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
     font-size: 1.6rem;
-    color: var(--color-primary-dark);
+    padding: 4px 20px;
 }
-
-
 
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) {
-    .blog .blog__card {
-        flex-direction: row;
+    .blog {
+        padding: 8rem 0;
     }
 
-    .blog .blog__card .blog__thumbnail {
-        flex: 0 0 50%;
+    .blog .blog__card:hover {
+        transform: translateY(-10px);
+        transition: var(--transition2s);
     }
-    
-    .blog .blog__card .blog__body {
-        flex: 0 0 50%;
+
+    .blog .blog__card .blog__body a h4:hover {
+        opacity: 0.8;
     }
+
+    .blog .blog__card .blog__body .more:hover {
+        background-color: var(--color-primary-dark);
+    }
+
+
 }
-
 
 
 

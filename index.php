@@ -602,35 +602,52 @@
         </div>
     </section>
 
-
+    <!-- BLOG -->
     <section class="blog cursiveTxt">
         <div class="container">
-            <div class="row my-5">
-                <div class="col-12 text-center">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
                     <header>
                         <h2>Blog</h2>
                         <p>Confira todas as notícias da Hagile no meio digital</p>
                     </header>
                 </div>
 
-                <div class="col-md-8">
-                    <article class="blog__card">
-                        <div class="blog__thumbnail">
-                            <a href="#">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/background/bg-aumentar-vendas.png" alt="Ilustração de fotos" class="img-fluid">
-                            </a>
-                        </div>
+                <?php 
+                    $my_args_depo = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                    );
 
-                        <div class="blog__body">
-                            <span>Publicado em ago 13, 2020</span>
-                            <a href="#">
-                                <h4>Porque sua empresa precisa investir em redes sociais?</h4>
-                            </a>
-                            <p>Investir em redes sociais ou não é uma dúvida que assombra muitos empreendedores. Isso porque, ninguém quer perder tempo com estratégias que não oferecem resultados, não é mesmo? No entanto, só para se ter uma ideia,...</p>
-                            <a class="more" href="#">Saiba mais</a>
-                        </div>
-                    </article>
+                    $my_query_depo = new WP_Query($my_args_depo);
+                    
+                    if($my_query_depo->have_posts()) : 
+                    while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                ?>
+
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <article class="blog__card" style="background-image: url('<?php the_post_thumbnail_url( $size ); ?>');">
+                            <div class="overlay"></div>
+                            
+                            <div class="blog__body">
+                                <span><i class="far fa-calendar-alt"></i> <?php echo get_the_date('d/m/y'); ?> </span>
+                                <a href="<?php the_permalink(); ?>">
+                                    <h4><?php the_title(); ?></h4>
+                                </a>
+                                <a class="more" href="<?php the_permalink(); ?>">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                <?php endwhile; ?>
+
+                <?php else : get_404_template(); endif; ?>
+                <?php wp_reset_query(); ?>
+
+                <div class="col-12 mt-4 text-center">
+                    <a href="#" class="btn btn-primary btn__had">Confira todas as notícias</a>
                 </div>
+                
             </div>
         </div>
     </section>

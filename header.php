@@ -6,6 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=269793114422068&autoLogAppEvents=1" nonce="mTFx7NDw"></script>
+
     <!-- ADD HEAD WORDPRESS -->
     <?php wp_head(); ?>
   </head>

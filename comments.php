@@ -1,0 +1,1 @@
+<div class="fb-comments" data-href="<?php the_permalink() ?>" data-numposts="6" data-width="100%"></div>
