@@ -15,7 +15,32 @@
   <body>
 
     <!-- HEADER -->
-    <header class="header" id="home">
+    <?php 
+        global $post;
+        $post_slug = $post->post_name;
+
+        $title = "";
+        $subtitle = "";
+
+        switch($post_slug) {
+            case 'clientes': 
+                echo '<header class="header--intern" id="home">';
+                $title = "Nossos clientes";
+                $subtitle = "Há décadas inovando os projetos digitais para as diversas áreas de negócios.";
+            break;
+
+            case 'portfolios':
+                echo '<header class="header--intern" id="home">';
+                $title = "Confira nosso Portfólio";
+                $subtitle = "Há mais de 10 anos fazendo o seu projeto sair do papel!";
+            break;
+
+            default: 
+                echo '<header class="header" id="home">';
+            break;
+        }
+    ?>
+
         <div class="expand-container">
             
             <?php get_template_part('partials/navbar'); ?>
@@ -90,11 +115,12 @@
 
             <?php } else { ?>
 
-                <div class="row">
+                <div class="row hero--intern cursiveTxt">
                     <div class="col-12">
-
-                        <h2><?php the_title(); ?></h2>
-
+                        <header>
+                            <h2><?php echo $title; ?></h2>
+                            <p><?php echo $subtitle; ?></p>
+                        </header>
                     </div>
                 </div>
 

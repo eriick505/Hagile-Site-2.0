@@ -22,7 +22,12 @@
 <!-- MENU PRINCIPAL -->
 <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
     <a class="navbar-brand" href="#">
-        <h1 class="text-hide m-0">Hagile Agência Digital</h1>
+        <?php if(is_home()) {
+            echo '<h1 class="logo--black text-hide m-0">Hagile Agência Digital</h1>';
+            } else {
+                echo '<h1 class="logo--white text-hide m-0">Hagile Agência Digital</h1>';
+            }
+        ?>
     </a>
 
     <button class="navbar-toggler animated-button border-0" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">

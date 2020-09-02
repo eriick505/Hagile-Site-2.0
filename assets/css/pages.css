@@ -1,0 +1,115 @@
+.header--intern {
+  background-image: url(../img/background/bg-intern-page.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px -9px 20px 2px rgba(3, 3, 3, 0.16);
+}
+
+.header--intern .navbar-light .navbar-nav .nav-link {
+  color: #ffffffbf;
+}
+
+.header--intern .hero--intern {
+  align-items: center;
+  color: var(--white);
+  height: 320px;
+  text-shadow: 2px 2px 3px rgb(3 3 3 / 24%);
+}
+
+.header--intern .hero--intern header h2 {
+  font-size: 4rem;
+}
+
+.header--intern .hero--intern header p {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 769px) {
+  .header--intern .hero--intern {
+    height: 400px;
+  }
+
+  
+  .header--intern .hero--intern header h2 {
+    font-size: 5rem;
+  }
+}
+
+/* 
+//
+//
+// 404 PAGE
+// */
+.page-404 header {
+  color: var(--color-primary);
+}
+
+.page-404 header span {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.page-404 header h2 {
+  font-size: 3.2rem;    
+}
+
+.page-404 span {
+  font-size: 1.5rem;
+}
+
+
+
+/* INTERN PAGES CLIENTES/PORTFOLIO */
+.internPage .navbar {
+  background-color: var(--color-primary);
+}
+
+/* BREAKPOINT TABLET-TO-PC */
+@media (min-width: 992px) { 
+  .internPage {
+      position: relative;
+      padding-left: 24rem;
+  }
+
+  .internPage .navbar {
+      display: flex;
+      flex-direction: column;
+      height: calc(128vh - 211px);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 20rem;
+  }
+
+  .internPage .container {
+      height: calc(128vh - 211px);
+      overflow-x: scroll;
+      padding-top: 3rem;
+  }
+
+  .internPage .container::-webkit-scrollbar { width: 4px; }
+
+  /* Fundo da barra de rolagem */
+  .internPage .container::-webkit-scrollbar-track-piece { background-color: #EEE; }
+
+  /* Cor do indicador de rolagem */
+  .internPage .container::-webkit-scrollbar-thumb:vertical,
+  .internPage .container::-webkit-scrollbar-thumb:horizontal { background-color: var(--color-primary); }
+
+  /* Cor do indicador de rolagem - ao passar o mouse */
+  .internPage .container::-webkit-scrollbar-thumb:vertical:hover,
+  .internPage .container::-webkit-scrollbar-thumb:horizontal:hover { background-color: #717171 }
+
+  .internPage .navbar .navbar-collapse {
+      width: 100%;
+      align-items: flex-start;
+  }
+
+  .internPage .navbar .navbar-nav .nav-link {
+      font-size: 1.5rem;
+  }
+} 

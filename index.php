@@ -604,7 +604,7 @@
 
     <!-- BLOG -->
     <section class="blog cursiveTxt">
-        <div class="container">
+        <div class="expand-container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <header>
