@@ -8,22 +8,12 @@
             </div>
         </header>
 
-        <ul>
-            <li><a href="#alimentacao">Alimentação</a></li>
-            <li><a href="#associacao">Associações</a></li>
-            <li><a href="#comercio">Comércio</a></li>
-            <li><a href="#concessionarias">Concessionárias</a></li>
-            <li><a href="#construtoras">Construtoras</a></li>
-            <li><a href="#consultorias">Consultorias</a></li>
-            <li><a href="#educacao">Educação</a></li>
-            <li><a href="#entretenimento">Entretenimento</a></li>
-            <li><a href="#industria">Indústria</a></li>
-            <li><a href="#juridico">Jurídico</a></li>
-            <li><a href="#saude">Saúde</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#telecom">Telecom</a></li>
-            <li><a href="#transportadora">Transportadora</a></li>
-            <li><a href="#turismo">Turismo</a></li>
-        </ul>
+        <!-- last-news -->
+        <div class="sidebar__lastPosts">
+            <?php
+                // ADICIONA WIDGET DINAMICO
+                dynamic_sidebar('Ultimos Posts');
+            ?>
+        </div>
     </div>
 </div>

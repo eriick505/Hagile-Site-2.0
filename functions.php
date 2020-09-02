@@ -125,7 +125,17 @@
     $labels->add_new_item = 'Adicionar o nome da empresa do cliente';
   }
   add_action('init', 'change_label_title_depoimento');
-
+  
+  // CRIAR A BARRA LATERAL DINAMICA (widget)
+  register_sidebar(
+    array(
+      'name' => 'Ultimos Posts',
+      'id' => 'sidebar',
+      'before_widget' => '<div> ',
+      'after_widget' => '</div>',
+      'before_title' => '<h5 class="font-weight-bold mb-3">',
+      'after_title' => '</h5>',
+  ));
 
   
 ?>

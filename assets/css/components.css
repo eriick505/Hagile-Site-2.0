@@ -32,7 +32,7 @@
 //
 // SIDEBAR
 */
-.sidebar {
+/* .sidebar {
     background-color: var(--color-primary);
     border-radius: 0.8rem;
     box-shadow: var(--box-shadow);
@@ -75,7 +75,7 @@
     position: absolute;
     top: -3px;
     left: -12px;
-}
+} */
 
 /* LIGADO DESLIGADO */
 .turn-on {

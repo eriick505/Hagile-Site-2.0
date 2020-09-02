@@ -3,6 +3,8 @@
 @import url('./components.css');
 @import url('./pages.css');
 
+/* limpar depois */
+@import url('./teste.css');
 
 :root {
     font-size: 60%;
