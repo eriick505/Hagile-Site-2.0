@@ -4,95 +4,51 @@
 
 <?php get_header(); ?>
 
-    <!-- CLIENTES -->
-    <section class="portfolio cursiveTxt" id="clientes">
-        <div class="container">
-            <div class="row py-5">
+<main class="internPage cursiveTxt portfolio">
 
-                <!-- CONTENT -->
-                <div class="col-lg-9 col-md-8">
-                    <!-- ALIMENTAÇÃO -->
-                    <section class="row" id="alimentacao">
+    <?php get_template_part('partials/sidebar_intern'); ?>
+
+    <!-- CONTENT START -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- ALIMENTAÇÃO -->
+                <section class="row" id="alimentacao">
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Alimentação</h2>
-                            </header>
-                        </div>
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Alimentação</h2>
+                        </header>
+                    </div>
 
-                        <!-- TURN ON -->
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                    <!-- TURN ON -->
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'alimentacao+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'alimentacao+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
-
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
-
-                        <?php endwhile; ?>
-
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- TURN OFF -->
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'alimentacao+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -103,97 +59,98 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
+                    <!-- TURN OFF -->
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    </section>
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'alimentacao+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
 
-                     <!-- ASSOCIAÇÕES -->
-                     <section class="row" id="associacao">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Assoaciações</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'associacoes+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- ASSOCIAÇÕES -->
+                <section class="row" id="associacao">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Assoaciações</h2>
+                        </header>
+                    </div>
+
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'associacoes+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'associacoes+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -204,96 +161,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- COMERCIO -->
-                    <section class="row" id="comercio">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'associacoes+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Comércio</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'comercio+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- COMERCIO -->
+                <section class="row" id="comercio">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Comércio</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'comercio+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'comercio+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -304,96 +261,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- CONCESSIONÁRIAS -->
-                    <section class="row" id="concessionarias">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'comercio+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Concessionárias</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'concessionarias+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- CONCESSIONÁRIAS -->
+                <section class="row" id="concessionarias">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Concessionárias</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'concessionarias+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'concessionarias+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -404,96 +361,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- CONSTRUTORAS -->
-                    <section class="row" id="construtoras">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'concessionarias+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Construtoras</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'construtoras+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- CONSTRUTORAS -->
+                <section class="row" id="construtoras">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Construtoras</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'construtoras+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'construtoras+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -504,96 +461,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- CONSULTORIA -->
-                    <section class="row" id="consultorias">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'construtoras+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Consultoria</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'consultorias+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- CONSULTORIA -->
+                <section class="row" id="consultorias">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Consultoria</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'consultorias+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'consultorias+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -604,96 +561,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- EDUCAÇÃO -->
-                    <section class="row" id="educacao">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'consultorias+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Educação</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'educacao+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- EDUCAÇÃO -->
+                <section class="row" id="educacao">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Educação</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'educacao+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'educacao+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -704,96 +661,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- ENTRETENIMENTO -->
-                    <section class="row" id="entretenimento">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'educacao+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Entretenimento</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'entretenimento+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- ENTRETENIMENTO -->
+                <section class="row" id="entretenimento">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Entretenimento</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'entretenimento+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'entretenimento+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -804,96 +761,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- INDÚSTRIA -->
-                    <section class="row" id="industria">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'entretenimento+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Indústria</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'industria+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- INDÚSTRIA -->
+                <section class="row" id="industria">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Indústria</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'industria+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'industria+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -904,96 +861,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- JURIDICO -->
-                    <section class="row" id="juridico">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'industria+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Jurídico</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'juridico+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- JURIDICO -->
+                <section class="row" id="juridico">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Jurídico</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'juridico+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'juridico+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -1004,96 +961,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- SAÚDE -->
-                    <section class="row" id="saude">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'juridico+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Saúde</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'saude+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- SAÚDE -->
+                <section class="row" id="saude">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Saúde</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'saude+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'saude+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -1104,96 +1061,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- SERVIÇOS -->
-                    <section class="row" id="servicos">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'saude+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Serviços</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'servicos+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- SERVIÇOS -->
+                <section class="row" id="servicos">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Serviços</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'servicos+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'servicos+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -1204,96 +1161,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- TELECOM -->
-                    <section class="row" id="telecom">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'servicos+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Telecom</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'telecom+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- TELECOM -->
+                <section class="row" id="telecom">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Telecom</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'telecom+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'telecom+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -1304,96 +1261,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- TRANSPORTADORA -->
-                    <section class="row" id="transportadora">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'telecom+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Transportadora</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'transportadora+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- TRANSPORTADORA -->
+                <section class="row" id="transportadora">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Transportadora</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'transportadora+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'transportadora+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -1404,96 +1361,96 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
 
-                    <!-- TURISMO -->
-                    <section class="row" id="turismo">
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'transportadora+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 mb-4 text-center text-md-left">
-                            <header>
-                                <h2>Turismo</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-on">
-                                <i class="fas fa-toggle-off"></i> <b>Online</b>
-                            </span>
-                            <hr>
-                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
 
-                        <!-- LOOP DO PORTFOLIO ONLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'turismo+online',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                                <div class="col-md-4 col-12 mb-4 text-center">
-                                    <article class="portfolio__box">
-                                        <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
-                                            <header>
-                                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                                                <div class="box-overlay">
-                                                    <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
-                                                </div>
-                                            </header>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                                            <footer>
-                                                <h4><?php the_title(); ?></h4>
-                                            </footer>
-                                        </a>
-                                    </article>
-                                </div>
+                </section>
 
-                        <?php endwhile; ?>
+                <!-- TURISMO -->
+                <section class="row" id="turismo">
+                    
+                    <div class="col-12 mb-4 text-center text-md-left">
+                        <header>
+                            <h2>Turismo</h2>
+                        </header>
+                    </div>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-on">
+                            <i class="fas fa-toggle-off"></i> <b>Online</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO ONLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'turismo+online',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <div class="col-12 my-4">
-                            <span class="turn-off">
-                                <i class="fas fa-toggle-off"></i> <b>Offline</b>
-                            </span>
-                            <hr>
-                        </div>
-
-                        <!-- LOOP DO PORTFOLIO OFFLINE -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'portfolio',
-                                'posts_per_page' => -1,
-                                'category_name' => 'turismo+offline',
-                                'order' => 'asc',
-                                'orderby' => 'name'
-                            );
-
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                                <div class="col-md-4 col-12 my-4 text-center">
-                                    <article class="portfolio__box">
+                            <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                <article class="portfolio__box">
+                                    <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                         <header>
                                             <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                             <div class="box-overlay">
@@ -1504,22 +1461,66 @@
                                         <footer>
                                             <h4><?php the_title(); ?></h4>
                                         </footer>
-                                    </article>
-                                </div>
+                                    </a>
+                                </article>
+                            </div>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+                    
 
-                    </section>
-                </div>
-                
-                <!-- SIDEBAR -->
-                <?php get_template_part('partials/sidebar_clientes'); ?>
+                    <div class="col-12 my-4">
+                        <span class="turn-off">
+                            <i class="fas fa-toggle-off"></i> <b>Offline</b>
+                        </span>
+                        <hr>
+                    </div>
+
+                    <!-- LOOP DO PORTFOLIO OFFLINE -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'portfolio',
+                            'posts_per_page' => -1,
+                            'category_name' => 'turismo+offline',
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
+                        
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
+
+                            <div class="col-lg-3 col-md-4 col-12 my-4 text-center">
+                                <article class="portfolio__box">
+                                    <header>
+                                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                                        <div class="box-overlay">
+                                            <span><?php the_field('nome_da_categoria_do_portfolio'); ?></span>
+                                        </div>
+                                    </header>
+
+                                    <footer>
+                                        <h4><?php the_title(); ?></h4>
+                                    </footer>
+                                </article>
+                            </div>
+
+                    <?php endwhile; ?>
+
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+
+                </section>
 
             </div>
         </div>
-    </section>
+    </div>
+    <!-- CONTENT END -->
+
+</main>
 
 <?php get_footer(); ?>

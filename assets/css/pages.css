@@ -63,9 +63,52 @@
 
 
 
-/* INTERN PAGES CLIENTES/PORTFOLIO */
+/* PAGINA INTERNA 
+// 
+// CLIENTES/PORTFOLIO */
 .internPage .navbar {
-  background-color: var(--color-primary);
+  background-color: var(--color-alt-blue);
+}
+
+.internPage .navbar ul li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.internPage .navbar ul li h3 {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.internPage .navbar ul li .form-control {
+  background-color: transparent;
+  border-width: 0 0 1px 0;
+  color: var(--white);
+}
+
+.internPage .navbar ul li .form-control::-webkit-input-placeholder {
+  color: var(--white);
+}
+
+.internPage .navbar ul li .form-control:-moz-placeholder {
+  color: var(--white);
+}
+
+.internPage .navbar ul li .form-control::-moz-placeholder {
+  color: var(--white);
+}
+
+.internPage .navbar ul li .form-control:-ms-input-placeholder {
+  color: var(--white);
+}
+
+.internPage .navbar-dark .navbar-nav .nav-link {
+  color: var(--white);
+}
+
+.internPage .navbar-dark .navbar-nav .nav-link:hover {
+  background-color: var(--color-green);
+  border-radius: 0.3rem;
+  color: var(--white);
 }
 
 /* BREAKPOINT TABLET-TO-PC */
@@ -78,11 +121,11 @@
   .internPage .navbar {
       display: flex;
       flex-direction: column;
-      height: calc(128vh - 211px);
+      height: calc(134vh - 197px);
       left: 0;
       position: absolute;
       top: 0;
-      width: 20rem;
+      width: 24rem;
   }
 
   .internPage .container {

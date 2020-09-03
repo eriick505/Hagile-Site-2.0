@@ -472,7 +472,8 @@ p {
 // PORTFOLIO
 // */
 .portfolio {
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .portfolio header h2 {
