@@ -13,7 +13,7 @@
 
   // ADICIONA O JAVASCRIPT DO SITE
   function add_scripts_js() {
-    wp_enqueue_script('jquery-3.5.1.slim.min', get_template_directory_uri() . '/assets/js/jquery-3.5.1.slim.min.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script('jquery-3.5.1.slim.min', get_template_directory_uri() . '/assets/js/jquery-3.5.1.complete.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script('popper', get_template_directory_uri() . '/assets/js/popper.min.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array ( 'jquery' ), 1.1, true);

@@ -68,10 +68,24 @@
 // CLIENTES/PORTFOLIO */
 .internPage .navbar {
   background-color: var(--color-alt-blue);
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.internPage .navbar .navbar-brand span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.internPage .navbar .animated-icon span {
+  background: var(--white);
 }
 
 .internPage .navbar ul li:not(:last-child) {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .internPage .navbar ul li h3 {
@@ -103,12 +117,7 @@
 
 .internPage .navbar-dark .navbar-nav .nav-link {
   color: var(--white);
-}
-
-.internPage .navbar-dark .navbar-nav .nav-link:hover {
-  background-color: var(--color-green);
-  border-radius: 0.3rem;
-  color: var(--white);
+  font-size: 1.5rem;
 }
 
 /* BREAKPOINT TABLET-TO-PC */
@@ -126,6 +135,16 @@
       position: absolute;
       top: 0;
       width: 24rem;
+  }
+
+  .internPage .navbar-dark .navbar-nav .nav-link:hover {
+    background-color: var(--color-dark);
+    border-radius: 0.3rem;
+    color: var(--white);
+  }
+
+  .internPage .navbar ul li:not(:last-child) {
+    margin-bottom: 1.2rem;
   }
 
   .internPage .container {
@@ -150,9 +169,5 @@
   .internPage .navbar .navbar-collapse {
       width: 100%;
       align-items: flex-start;
-  }
-
-  .internPage .navbar .navbar-nav .nav-link {
-      font-size: 1.5rem;
   }
 } 

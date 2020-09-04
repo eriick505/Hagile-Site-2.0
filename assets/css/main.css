@@ -622,9 +622,10 @@ p {
 .clients {
     background-image: url(../img/background/bg-clientes.png);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right bottom;
     color: var(--color-primary-dark);
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .clients header h2 {

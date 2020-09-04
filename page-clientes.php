@@ -4,544 +4,545 @@
 
 <?php get_header(); ?>
 
-    <!-- CLIENTES -->
-    <section class="clients cursiveTxt" id="clientes">
-        <div class="container">
-            <div class="row py-5">
+<main class="internPage cursiveTxt clients">
 
-                <!-- CONTENT -->
-                <div class="col-lg-9 col-md-8">
-                    <!-- ALIMENTAÇÃO -->
-                    <section class="row " id="alimentacao">
+    <?php get_template_part('partials/sidebar_intern'); ?>
+
+    <!-- CONTENT START -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- ALIMENTAÇÃO -->
+                <section class="row" id="alimentacao">
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Alimentação</h2>
-                            </header>
-                        </div>
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Alimentação</h2>
+                        </header>
+                    </div>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'alimentacao',
-                                'order' => 'asc'
-                            );
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'alimentacao',
+                            'order' => 'asc'
+                        );
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
-
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
-
-                        <?php endwhile; ?>
-
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
-
-                    </section>
-
-                    <!-- ASSOCIAÇÕES -->
-                    <section class="row " id="associacao">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Associações</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'associacoes',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- ASSOCIAÇÕES -->
+                <section class="row" id="associacao">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Associações</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'associacoes',
+                            'order' => 'asc'
+                        );
 
-                     <!-- COMERCIO -->
-                    <section class="row " id="comercio">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Comércio</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'comercio',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                    <!-- COMERCIO -->
+                <section class="row" id="comercio">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Comércio</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'comercio',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Concessionárias -->
-                    <section class="row " id="concessionarias">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Concessionárias</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'concessionarias',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Concessionárias -->
+                <section class="row" id="concessionarias">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Concessionárias</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'concessionarias',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Construtoras -->
-                    <section class="row " id="construtoras">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Construtoras</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'construtoras',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Construtoras -->
+                <section class="row" id="construtoras">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Construtoras</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'construtoras',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Consultorias -->
-                    <section class="row " id="consultorias">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Consultorias</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'consultorias',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Consultorias -->
+                <section class="row" id="consultorias">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Consultorias</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'consultorias',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Educação -->
-                    <section class="row " id="educacao">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Educação</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'educacao',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Educação -->
+                <section class="row" id="educacao">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Educação</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'educacao',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Entretenimento -->
-                    <section class="row " id="entretenimento">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Entretenimento</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'entretenimento',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Entretenimento -->
+                <section class="row" id="entretenimento">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Entretenimento</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'entretenimento',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Indústria -->
-                    <section class="row " id="industria">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Indústria</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'industria',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Indústria -->
+                <section class="row" id="industria">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Indústria</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'industria',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Jurídico -->
-                    <section class="row " id="juridico">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Jurídico</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'juridico',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Jurídico -->
+                <section class="row" id="juridico">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Jurídico</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'juridico',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Saúde -->
-                    <section class="row " id="saude">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Saúde</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'saude',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Saúde -->
+                <section class="row" id="saude">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Saúde</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'saude',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Serviços -->
-                    <section class="row " id="servicos">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Serviços</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'servicos',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Serviços -->
+                <section class="row" id="servicos">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Serviços</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'servicos',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Telecom -->
-                    <section class="row " id="telecom">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Telecom</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'telecom',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Telecom -->
+                <section class="row" id="telecom">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Telecom</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'telecom',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Transportadora -->
-                    <section class="row " id="transportadora">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Transportadora</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'transportadora',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Transportadora -->
+                <section class="row" id="transportadora">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Transportadora</h2>
+                        </header>
+                    </div>
 
-                    </section>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'transportadora',
+                            'order' => 'asc'
+                        );
 
-                    <!-- Turismo -->
-                    <section class="row " id="turismo">
+                        $my_query_depo = new WP_Query($my_args_depo);
                         
-                        <div class="col-12 text-center text-md-left">
-                            <header>
-                                <h2>Turismo</h2>
-                            </header>
-                        </div>
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
 
-                        <!-- LIST CATEGORY CLIENTS -->
-                        <?php 
-                            $my_args_depo = array(
-                                'post_type' => 'cliente',
-                                'posts_per_page' => -1,
-                                'category_name' => 'turismo',
-                                'order' => 'asc'
-                            );
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
 
-                            $my_query_depo = new WP_Query($my_args_depo);
-                            
-                            if($my_query_depo->have_posts()) : 
-                            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
-                        ?>
+                    <?php endwhile; ?>
 
-                        <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
-                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
 
-                        <?php endwhile; ?>
+                </section>
 
-                        <?php else : get_404_template(); endif; ?>
-                        <?php wp_reset_query(); ?>
+                <!-- Turismo -->
+                <section class="row" id="turismo">
+                    
+                    <div class="col-12 text-center text-md-left">
+                        <header>
+                            <h2>Turismo</h2>
+                        </header>
+                    </div>
 
-                    </section>
-                </div>
-                
-                <!-- SIDEBAR -->
-                <?php get_template_part('partials/sidebar_clientes'); ?>
+                    <!-- LIST CATEGORY CLIENTS -->
+                    <?php 
+                        $my_args_depo = array(
+                            'post_type' => 'cliente',
+                            'posts_per_page' => -1,
+                            'category_name' => 'turismo',
+                            'order' => 'asc'
+                        );
+
+                        $my_query_depo = new WP_Query($my_args_depo);
+                        
+                        if($my_query_depo->have_posts()) : 
+                        while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+                    ?>
+
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
+                    </div>
+
+                    <?php endwhile; ?>
+
+                    <?php else : get_404_template(); endif; ?>
+                    <?php wp_reset_query(); ?>
+
+                </section>
 
             </div>
         </div>
-    </section>
+    </div>
+    <!-- CONTENT END -->
+
+</main>
 
 <?php get_footer(); ?>

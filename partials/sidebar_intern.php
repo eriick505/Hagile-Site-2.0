@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand ">
-        <span class="d-block d-lg-none">Acessar Categorias</span>
+        <span class="d-block d-lg-none">Menu de Categorias</span>
     </a>
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuCategorias" aria-controls="menuCategorias" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler animated-button border-0" type="button" data-toggle="collapse" data-target="#menuCategorias" aria-controls="menuCategorias" aria-expanded="false" aria-label="Toggle navigation" id="categoria-button">
+        <div class="animated-icon" id="categoria-animated"><span></span><span></span><span></span><span></span></div>
     </button>
 
     <div class="navbar-collapse collapse" id="menuCategorias" style="">

@@ -1,10 +1,12 @@
 $(document).ready(function () {
     /*ANIMAÇÃO DO HAMBURGER BUTTON*/
-    $('.animated-button').on('click', function () {
-
-        $('.animated-icon').toggleClass('open');
+    $('#main-button').on('click', function () {
+        $('#main-animated').toggleClass('open');
     })
 
+    $('#categoria-button').on('click', function () {
+      $('#categoria-animated').toggleClass('open');
+    })
 
     $('.testimonial__list').slick({
         infinite: true,
@@ -58,5 +60,34 @@ $(document).ready(function () {
     rescaleCaptcha();
     $( window ).resize(function() { rescaleCaptcha(); });
 
+
+    // Adiciona smoth scroll ao navlink dentro do menu
+    $(".nav-link").on('click', function(event) {
+      // Certifica que this.hash tem valor antes de substituir o comportamento padrão
+      if (this.hash !== "") {
+        // Previne o comportamento padrão do clique da âncora
+        event.preventDefault();
+
+        // Armazena a hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // Usando o metodo animate do jquery para adicionar o smoth scroll
+        // O número opcional (800) especifica o número de milissegundos que leva para rolar para a área especificada
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Adicionar hash (#) ao URL quando terminar de rolar (comportamento de clique padrão)
+          window.location.hash = hash;
+        });
+      } // fim do if
+    });
+
+    // FECHA O MENU DE CATEGORIAS AO CLICAR 
+    $(".nav-link").on('click', function(){
+      $('#menuCategorias').toggleClass('show');
+      $('#categoria-animated').toggleClass('open');
+    })
 
 }); 
