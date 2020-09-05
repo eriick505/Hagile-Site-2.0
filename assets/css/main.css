@@ -929,8 +929,10 @@ p {
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) {
     .blog {
-        padding: 8rem 0;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
+    
 
     .blog .blog__card:hover {
         transform: translateY(-10px);
