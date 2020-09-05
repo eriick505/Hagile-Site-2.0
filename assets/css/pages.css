@@ -26,14 +26,12 @@
   font-size: 1.8rem;
 }
 
-
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) {
   .header--intern .hero--intern {
     height: 400px;
   }
 
-  
   .header--intern .hero--intern header h2 {
     font-size: 5rem;
   }
@@ -128,13 +126,13 @@
   }
 
   .internPage .navbar {
-      display: flex;
-      flex-direction: column;
-      height: calc(134vh - 197px);
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 24rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(134vh - 197px);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24rem;
   }
 
   .internPage .navbar-dark .navbar-nav .nav-link:hover {
@@ -148,9 +146,9 @@
   }
 
   .internPage .container {
-      height: calc(128vh - 211px);
-      overflow-x: scroll;
-      padding-top: 3rem;
+    height: calc(128vh - 211px);
+    overflow-x: scroll;
+    padding-top: 3rem;
   }
 
   .internPage .container::-webkit-scrollbar { width: 4px; }
@@ -172,29 +170,3 @@
   }
 } 
 
-
-/* 
-//
-//
-// SINGLE BLOG
-// */
-.single__blog h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-
-.single__blog ul {
-  margin: 20px 0;
-}
-
-.single__blog img {
-  max-width: 100%;
-  height: auto;
-}
-
-.single__blog .date {
-  color: var(--color-alt-blue);
-  display: block;
-  font-size: 1.3rem;
-  font-weight: 600;
-}

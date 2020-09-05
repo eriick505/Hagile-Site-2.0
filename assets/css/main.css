@@ -2,6 +2,7 @@
 @import url('./bars-menu.css');
 @import url('./components.css');
 @import url('./pages.css');
+@import url('./single.css');
 
 
 :root {
@@ -62,6 +63,10 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+h3, h4, h5, h6 {
+    font-weight: 600;
 }
 
 p {

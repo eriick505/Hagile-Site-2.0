@@ -146,26 +146,15 @@
   function custom_excerpt_more($more) {
       return '…';
   }
-  add_filter('excerpt_more', 'custom_excerpt_more');
+  add_filter('excerpt_more', 'custom_excerpt_more');  
 
-  function my_pagination() {
-    global $wp_query;
-    
-    echo paginate_links( array(
-        'base' => str_replace( 9999999999999, '%#%', esc_url( get_pagenum_link( 9999999999999 ) ) ),
-        'format' => '?paged=%#%',
-        'current' => max( 1, get_query_var( 'paged' ) ),
-        'total' => $wp_query->max_num_pages,
-        'type' => 'list',
-        'prev_next' => true,
-        'prev_text' => 'Página Anterior',
-        'next_text' => 'Próxima Página',
-        'before_page_number' => '-',
-        'after_page_number' => '>',
-        'show_all' => false,
-        'mid_size' => 3,
-        'end_size' => 1,
-    ) );
+  // DEFINI O ESTILO DA PAGINAÇÃO
+  add_filter('next_posts_link_attributes', 'posts_link_attributes');
+  add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+  function posts_link_attributes() {
+      return 'class="btn btn-success"';
   }
+
   
 ?>

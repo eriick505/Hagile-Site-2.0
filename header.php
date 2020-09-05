@@ -35,10 +35,24 @@
                 $subtitle = "Há mais de 10 anos fazendo o seu projeto sair do papel!";
             break;
 
+            case 'blog':
+                echo '<header class="header--intern" id="home">';
+                $title = "Blog";
+                $subtitle = "Confira todas as notícias da Hagile no meio digital";
+            break;
+
             default: 
-                echo '<header class="header" id="home">';
+                if(is_single()) {
+                    echo '<header class="header--single" id="home">';
+                } else {
+                    echo '<header class="header" id="home">';
+                }
             break;
         }
+
+        // if(is_single()) {
+        //     echo '<header class="header--single" id="home">';
+        // }
     ?>
 
         <div class="expand-container">

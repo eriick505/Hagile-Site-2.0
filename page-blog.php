@@ -7,24 +7,20 @@
   <div class="expand-container blog cursiveTxt">
     <div class="row">
 
-      <div class="col-12 mb-5">
-          <header>
-              <h2>Blog</h2>
-              <p>Confira todas as notícias da Hagile no meio digital</p>
-          </header>
-      </div>
-
       <div class="col-lg-9 col-md-8 mb-4">
         <?php 
-            $my_args_depo = array(
+            $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+            $my_args_post = array(
                 'post_type' => 'post',
-                'posts_per_page' => 3,
+                'posts_per_page' => 6,
+                'paged' => $paged
             );
 
-            $my_query_depo = new WP_Query($my_args_depo);
+            $my_query_post = new WP_Query($my_args_post);
             
-            if($my_query_depo->have_posts()) : 
-            while($my_query_depo->have_posts()) : $my_query_depo->the_post();
+            if($my_query_post->have_posts()) : 
+            while($my_query_post->have_posts()) : $my_query_post->the_post();
         ?>
             
             <article class="blog__card mb-4" style="background-image: url('<?php the_post_thumbnail_url( $size ); ?>');">
@@ -35,7 +31,6 @@
                     <a href="<?php the_permalink(); ?>">
                         <h4><?php the_title(); ?></h4>
                     </a>
-                    <?php the_excerpt(); ?>
                     <a class="more" href="<?php the_permalink(); ?>">Saiba mais <i class="fas fa-chevron-right"></i></a>
                 </div>
             </article>
@@ -52,7 +47,8 @@
 
       <div class="col-12 my-2 text-md-left text-center">
           <div class="">
-              <?php my_pagination(); ?>
+            <?php previous_posts_link('🡰 Mais recente'); ?> 
+            <?php next_posts_link( __( 'Mais antigo 🡲', 'textdomain' ), $my_query_post->max_num_pages ); ?> 
           </div>
       </div>
 
