@@ -3,8 +3,6 @@
 @import url('./components.css');
 @import url('./pages.css');
 
-/* limpar depois */
-@import url('./teste.css');
 
 :root {
     font-size: 60%;
@@ -847,7 +845,8 @@ p {
 // 5 MOTIVOS
 // */
 .blog {
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .blog header h2 {
@@ -909,7 +908,9 @@ p {
 }
 
 .blog .blog__card .blog__body p {
+    color: var(--white);
     font-size: 1.6rem;
+    margin-bottom: 2rem;
 }
 
 .blog .blog__card .blog__body .more {

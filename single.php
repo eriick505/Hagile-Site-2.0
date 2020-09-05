@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <div class="container my-5">
+  <div class="expand-container my-5">
     <div class="row">
       <main class="col-lg-9 col-md-8 mb-3">
         <?php if(have_posts()) : 

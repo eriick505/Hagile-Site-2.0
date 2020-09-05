@@ -645,7 +645,7 @@
                 <?php wp_reset_query(); ?>
 
                 <div class="col-12 mt-4 text-center">
-                    <a href="#" class="btn btn-primary btn__had">Confira todas as notícias</a>
+                    <a href="blog" class="btn btn-primary btn__had">Confira todas as notícias</a>
                 </div>
                 
             </div>

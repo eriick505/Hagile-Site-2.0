@@ -1,5 +1,5 @@
 <div class="col-lg-3 col-md-4">
-    <div class="sidebar">
+    <div class="sidebar shadow">
         <header>
             <h3><i class="fas fa-sort"></i> Pesquisar postagens:</h3>
 
@@ -9,7 +9,7 @@
         </header>
 
         <!-- last-news -->
-        <div class="sidebar__lastPosts">
+        <div class="sidebar__lastPosts mt-5">
             <?php
                 // ADICIONA WIDGET DINAMICO
                 dynamic_sidebar('Ultimos Posts');

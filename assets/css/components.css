@@ -28,55 +28,6 @@
     font-weight: 700;
 }
 
-/* 
-//
-// SIDEBAR
-*/
-/* .sidebar {
-    background-color: var(--color-primary);
-    border-radius: 0.8rem;
-    box-shadow: var(--box-shadow);
-    padding: 1.8rem 0;
-}
-
-.sidebar header {
-    color: var(--white);
-    padding: 1.6rem 0.8rem;
-}
-
-.sidebar header h3 {
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.sidebar ul li {
-    font-size: 1.6rem;
-    padding: 0.6rem 0 0.6rem 2.4rem;
-}
-
-.sidebar ul li:not(:last-child) {
-    margin-bottom: 0.8rem;
-}
-
-.sidebar ul li a {
-    color: var(--white);
-    font-weight: 600;
-    position: relative;
-    transition: var(--transition2s);
-}
-
-
-.sidebar ul li a:after {
-    font-family: "Font Awesome 5 Free";
-    content: '\f105';
-    width: 30px;
-    height: 30px;
-    display: none;
-    position: absolute;
-    top: -3px;
-    left: -12px;
-} */
-
 /* LIGADO DESLIGADO */
 .turn-on {
     font-size: 1.7rem;
@@ -98,11 +49,62 @@
 }
 
 
+/* 
+//
+// SIDEBAR
+*/
+/* 
+//
+// SIDEBAR
+*/
+.sidebar {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    margin-bottom: 20px;
+    padding: 1.8rem 2rem;
+}
+  
+.sidebar header {
+    color: var(--white);
+}
 
+.sidebar header h3 {
+    color: var(--color-alt-blue);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.sidebar h5 {
+    font-size: 1.8rem;
+}
+
+.sidebar ul li:not(:last-child) {
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    color: var(--color-alt-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition2s);
+}
+
+.sidebar ul li a:after {
+    content: '\f105';
+    display: none;
+    font-family: "Font Awesome 5 Free";
+    height: 30px;
+    left: -12px;
+    position: absolute;
+    top: 0px;
+    width: 30px;
+}
 /* BREAKPOINT TABLET-TO-PC */
 @media (min-width: 769px) {
     .sidebar ul li:hover {
-        background-color: var(--white);
         cursor: pointer;
         transition: var(--transition2s);
     }
@@ -112,7 +114,7 @@
     }
 
     .sidebar ul li:hover a {
-        color: var(--color-primary);
+        color: var(--color-green);
         transition: var(--transition2s);
     }
 }
