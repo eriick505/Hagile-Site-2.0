@@ -42,22 +42,20 @@
             break;
 
             default: 
-                if(is_single()) {
+                if(is_singular('post')) {
                     echo '<header class="header--single" id="home">';
+                } elseif (is_singular('servico')) {
+                    echo '<header class="header--servico" id="home">';
                 } else {
                     echo '<header class="header" id="home">';
                 }
             break;
         }
-
-        // if(is_single()) {
-        //     echo '<header class="header--single" id="home">';
-        // }
     ?>
 
         <div class="expand-container">
             
-            <?php get_template_part('partials/navbar'); ?>
+            <?php get_template_part('components/navbar'); ?>
 
             <?php if(is_home()) { ?>
             
@@ -130,12 +128,30 @@
             <?php } else { ?>
 
                 <div class="row hero--intern cursiveTxt">
-                    <div class="col-12">
-                        <header>
-                            <h2><?php echo $title; ?></h2>
-                            <p><?php echo $subtitle; ?></p>
-                        </header>
-                    </div>
+                    
+                    <?php
+                        if (is_singular('servico')) {
+                    ?> 
+                    
+                        <div class="col-md-8">
+                            <header>
+                                <span>Solução rápida para você</span>
+                                <h2><?php the_field('titulo'); ?></h2>
+                                <p><?php the_field('subtitulo'); ?></p>
+                            </header>
+                        </div>
+
+                    <?php } else { ?>
+
+                        <div class="col-12">
+                            <header>
+                                <h2><?php echo $title; ?></h2>
+                                <p><?php echo $subtitle; ?></p>
+                            </header>
+                        </div>
+
+                    <?php } ?>
+                        
                 </div>
 
             <?php } ?>

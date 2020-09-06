@@ -6,7 +6,7 @@
 
 <main class="internPage cursiveTxt clients">
 
-    <?php get_template_part('partials/sidebar_intern'); ?>
+    <?php get_template_part('components/sidebar_intern'); ?>
 
     <!-- CONTENT START -->
     <div class="container">

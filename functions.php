@@ -113,6 +113,23 @@
         'taxonomies' => array('category')
       )
     );
+
+    register_post_type('servico', 
+      array(
+        'labels' => array(
+          'name' => __('Serviços'),
+          'singular_name' => __('Servico'),
+        ),
+        'supports' => array(
+            'title', 'thumbnail', 'editor',
+        ),
+        'public' => true, 
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-clipboard',
+        'rewrite' => array('slug' => 'servico'),
+      )
+    );
+    
   }
 
   // INICIAR O TIPO DE POST PERSONALIZADO

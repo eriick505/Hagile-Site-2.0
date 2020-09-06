@@ -41,10 +41,10 @@
         <?php wp_reset_query(); ?>
       </div>
       
-
       <!-- sidebar__here -->
       <?php get_sidebar(); ?>
-
+      
+      <!-- pagination -->
       <div class="col-12 my-2 text-md-left text-center">
           <div class="">
             <?php previous_posts_link('🡰 Mais recente'); ?> 
