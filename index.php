@@ -27,7 +27,7 @@
     <!-- O QUE NÓS FAZEMOS -->
     <section class="whatWeDo cursiveTxt" id="solucoes">
         <div class="container">
-            <div class="row py-5">
+            <div class="row justify-content-center py-5">
                 <div class="col-12 text-center mb-5">
                     <header class="mb-4">
                         <h2>O que nós fazemos</h2>
@@ -298,7 +298,7 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                        <div class="col-lg-3 col-md-4 col-12 mb-4 text-center">
+                                        <div class="col-lg-3 col-md-6 col-12 mb-4 text-center">
                                             <article class="portfolio__box">
                                                 <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                                     <header>
@@ -340,7 +340,7 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                        <div class="col-lg-3 col-md-4 col-12 mb-3 text-center">
+                                        <div class="col-lg-3 col-md-6 col-12 mb-3 text-center">
                                             <article class="portfolio__box">
                                                 <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                                     <header>
@@ -386,7 +386,7 @@
                                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                                 ?>
 
-                                        <div class="col-lg-3 col-md-4 col-12 mb-3 text-center">
+                                        <div class="col-lg-3 col-md-6 col-12 mb-3 text-center">
                                             <article class="portfolio__box">
                                                 <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
                                                     <header>
@@ -605,7 +605,7 @@
     <!-- BLOG -->
     <section class="blog cursiveTxt">
         <div class="expand-container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12 text-center mb-5">
                     <header>
                         <h2>Blog</h2>
@@ -793,7 +793,7 @@
                                 <textarea class="form-control" name="recebemsg" placeholder="Mensagem..." id="mensagem" rows="3"></textarea>
                             </div>
 
-                            <div class="g-recaptcha mb-2" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY&amp;co=aHR0cHM6Ly93d3cuaGFnaWxlLmNvbS5icjo0NDM.&amp;hl=pt-BR&amp;v=IU7gZ7o6RDdDE6U4Y1YJJWnN&amp;size=normal&amp;cb=9gla7z1ickoi" width="304" height="78" role="presentation" name="a-3qlxs6tx5dbc" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                            <div class="g-recaptcha mb-2" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"></div>
 
                             <button type="submit" class="btn btn-primary w-100 rounded-pill mt-3" aria-label="comece agora"><b>Fale Conosco!</b></button>
                         </form>
@@ -804,7 +804,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 col-md-8 text-center oder-lg-1 order-0">
+                <div class="col-lg-7 text-center oder-lg-1 order-0">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/homem-patins.png" alt="Figura ilustrativa de um homem andando de patins com icones de redes sociais ao redor" class="img-fluid">
                 </div>
             </div>

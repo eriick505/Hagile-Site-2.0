@@ -1,8 +1,8 @@
 .header--servico {
-  background-image: url(../img/background/bg-aumentar-vendas.png);
-  background-position: center top;
+  background-image: url(../img/background/bg-landing-pages.jpg);
+  background-color: var(--color-green);
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
   box-shadow: inset 0px -9px 20px 2px rgba(3, 3, 3, 0.16);
 }
 
@@ -30,7 +30,7 @@
   font-size: 1.8rem;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) {
   .header--servico .hero--intern {
     height: 400px;
@@ -41,35 +41,141 @@
   }
 }
 
-/* LANDING PAGE */
-
-.bg-gray { background: #f2f2f26e; font-family: 'Roboto', sans-serif; }
-.standard-page h3 { font-size: 26px; }
-.standard-page h5 { color: #007bff; font-weight: 600; }
-.standard-page .far { color: #1e816b; }
-
-/* form */
-.form-card { position: relative; }
-.form-card .form-head { background: #00b7ff; color: #fff; padding: 18px 3px; border-radius: 14px 14px 0 0; }
-.form-card .form-head h3 { font-weight: 400; margin-bottom: 12px; }
-.form-card .form-body { padding: 31px 16px; background: #fff; border: 1px solid #0000000d; box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.06), 9px 12px 20px 0 rgba(0, 0, 0, 0.04); }  
-.form-card form .form-control { border: 1px solid #00b7ff; } 
-.form-card form span { font-size: 10px; color: #808080; font-style: italic; }
-.form-card .form-icon i { height: 40px; line-height: 40px; width: 40px; font-size: 20px; background: #fff; color: #00b7ff; border-radius: 50px; text-align: center; position: absolute; right: -11px; top: -8px; }
-.form-card .form-footer h6 { font-size: 12px; color: #808080; text-align: center; font-weight: normal; margin-top: 14px; }
-
 
 /* BG-COLORS LANDINGPAGE */
-.blue { background: #17b7b7; }
-.green { background: #89cf7e; }
+.blue   { background: #17b7b7; }
+.green  { background: #89cf7e; }
 .purple { background: #a29bfe; }
 .orange { background: #fab1a0; }
-.red { background: #ff7979; }
-.txt-blue { color: #3677f1; }
+.red    { background: #ff7979; }
 
 
-.section-default { padding: 36px 0; }
-.section-default .info { border-bottom: 2px solid #009bc1; border-left: 2px solid #009bc1; display: inline-block; margin-bottom: 12px; background: #fff; padding: 2px 7px; }
-.section-default .info h2 { color: #01beed; font-weight: bold; font-size: 16px; margin-bottom: 0; }
-.default-clientes header h5 { color: #2390ec; font-weight: 600; font-size: 17px; }
-.default-clientes header h3 { font-weight: bold; font-size: 34px; color: #172333; } .default-clientes h3 span { font-weight: 200; }
+/* 
+//
+//
+// CONTENT LANDING PAGE
+// */
+.section-default { 
+  padding: 3.6rem 0; 
+}
+
+.section-default .info { 
+  background: #fff; 
+  border-bottom: 0.2rem solid #009bc1; 
+  border-left: 0.2rem solid #009bc1; 
+  display: inline-block; 
+  margin-bottom: 12px; 
+  padding: 0.2rem 0.7rem; 
+}
+
+.section-default .info h2 { 
+  color: #01beed; 
+  font-size: 1.6rem; 
+  font-weight: bold; 
+  margin-bottom: 0; 
+}
+
+.default-clientes header h5 { 
+  color: #2390ec; 
+  font-weight: 600; 
+  font-size: 1.7rem; 
+}
+
+.default-clientes header h3 { 
+  color: #172333; 
+  font-size: 3.4rem; 
+  font-weight: bold; 
+} 
+
+.default-clientes h3 span { 
+  font-weight: 200; 
+}
+
+
+/* 
+//
+//
+// FORM LANDING PAGE
+// */
+.form-card { 
+  position: relative; 
+}
+
+.form-card .form-head { 
+  background: var(--color-primary);
+  border-radius: 1.4rem 1.4rem 0 0; 
+  color: var(--white); 
+  padding: 1.8rem 0.3rem; 
+}
+
+.form-card .form-head h3 { 
+  font-weight: 400; 
+  font-size: 2rem;
+  margin-bottom: 1.2rem; 
+}
+
+.form-card .form-body { 
+  background: var(--white); 
+  border: 1px solid #0000000d; 
+  box-shadow: var(--box-shadow); 
+  padding: 3rem 1.6rem; 
+}  
+
+.form-card form .form-control { 
+  border: 0.2rem solid var(--color-primary);
+} 
+
+.form-card label {
+  font-size: 1.4rem;
+}
+
+.form-card label span { 
+  color: rgb(197, 29, 29); 
+}
+
+.form-card .form-icon i { 
+  background: var(--white); 
+  border-radius: 5rem; 
+  color: var(--color-primary); 
+  font-size: 2rem; 
+  height: 4rem; 
+  line-height: 4rem; 
+  position: absolute; 
+  right: -11px; 
+  text-align: center; 
+  top: -8px; 
+  width: 4rem; 
+}
+
+
+
+/* BREAKPOINT DESKTOP */
+@media (min-width: 1025px) {
+  .form-card { 
+    margin-top: -348px; 
+  }
+}
+
+
+
+/* 
+//
+//
+// ENDPAGE LANDING PAGE
+// */
+.endPages header h5 {
+  color: var(--color-alt-blue);
+  font-size: 1.7rem;
+}
+
+.endPages header h3 {
+  font-size: 2.8rem;
+}
+
+.endPages header h3 span {
+  font-weight: 200;
+}
+
+.endPages .btn {
+  border-width: 0.2rem;
+}

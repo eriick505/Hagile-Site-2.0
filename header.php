@@ -61,7 +61,7 @@
             
                 <!-- HERO MAIN -->
                 <div class="row hero">
-                    <div class="col-lg-5 col-md-12 text-lg-left text-md-center order-1 order-lg-0">
+                    <div class="col-lg-5 text-lg-left text-md-center order-1 order-lg-0">
                             
                         <div class="hero__text">
                             <header>
@@ -90,7 +90,7 @@
                                         <textarea class="form-control" name="recebemsg" placeholder="Mensagem..." id="mensagem" rows="3"></textarea>
                                     </div>
 
-                                    <div class="g-recaptcha mb-2" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY&amp;co=aHR0cHM6Ly93d3cuaGFnaWxlLmNvbS5icjo0NDM.&amp;hl=pt-BR&amp;v=IU7gZ7o6RDdDE6U4Y1YJJWnN&amp;size=normal&amp;cb=9gla7z1ickoi" width="304" height="78" role="presentation" name="a-3qlxs6tx5dbc" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                                    <div class="g-recaptcha mb-2" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"></div>
 
                                     <button type="submit" class="btn btn-primary w-100 rounded-pill mt-3" aria-label="comece agora"><b>Fale Conosco!</b></button>
                                 </form>
@@ -133,7 +133,7 @@
                         if (is_singular('servico')) {
                     ?> 
                     
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
                             <header>
                                 <span>Solução rápida para você</span>
                                 <h2><?php the_field('titulo'); ?></h2>

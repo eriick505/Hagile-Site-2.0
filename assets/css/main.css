@@ -35,7 +35,7 @@
 }
 
 /* BREAKPOINT TABLET-TO-PC */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     :root {
         font-size: 62.5%;
     }
@@ -162,7 +162,7 @@ p {
 }
 
 .socialIcon__list {
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
 }
@@ -189,13 +189,14 @@ p {
     margin: 0 10px;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
-@media (min-width: 769px) {
+/* BREAKPOINT DESKTOP */
+@media (min-width: 1025px) {
     .navbar .navbar-brand h1 {
         width: 227px;
     }
 
     .socialIcon__list {
+        display: flex;
         width: auto;
     }
 
@@ -641,7 +642,6 @@ p {
 }
 
 
-
 /* 
 //
 //
@@ -710,9 +710,16 @@ p {
     transition: var(--transition2s);
 }
 
+/* BREAKPOINT TABLET */
+@media (min-width: 768px) { 
+    .increaseSales {
+        background-size: 100% 420px;
+    }
+}
 
-/* BREAKPOINT TABLET-TO-PC */
-@media (min-width: 769px) { 
+
+/* BREAKPOINT DESKTOP */
+@media (min-width: 1025px) { 
     .increaseSales {
         background-size: cover;
         height: 860px;

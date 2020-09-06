@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container endPages">
     <div class="row my-5 justify-content-center">
         <div class="col-md-12 text-center">
             <header>
@@ -13,7 +13,9 @@
         </div>
 
         <div class="col-md-12 text-center">
-            <a href="#" class="btn btn-primary rounded-pill wow pulse" data-toggle="modal" data-target="#formulario">FALE CONOSCO</a>
+            <a href="#" class="btn btn-outline-primary rounded-pill py-4 px-5 wow pulse" data-toggle="modal" data-target="#formulario">
+                <strong>FALE CONOSCO</strong>
+            </a>
         </div>
     </div>
-</div>
+</section>

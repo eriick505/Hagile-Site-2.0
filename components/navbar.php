@@ -47,7 +47,7 @@
             'walker'            => new WP_Bootstrap_Navwalker(),
         ) );
     ?>
-    <div class="socialIcon__list d-none d-md-flex">
+    <div class="socialIcon__list">
         <ul>
             <li>
                 <a class="icon-footer" href="https://www.facebook.com/HagileAgenciaDigital" target="_blank" aria-label="facebook da hagile" rel="noopener">
