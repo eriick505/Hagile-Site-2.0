@@ -4,7 +4,7 @@
 @import url('./pages.css');
 @import url('./single.css');
 @import url('./pages-services.css');
-@import url('./hagilize.css');
+@import url('./floating-animation.css');
 
 
 :root {
@@ -29,14 +29,14 @@
     --box-shadow: 2px 2px 7px 1px rgba(3, 3, 3, 0.16);
 }
 
-/* BREAKPOINT MOBILE-TO-TABLET */
+/* BREAKPOINT TABLET */
 @media (min-width: 768px) {
     :root {
         font-size: 78%;
     }
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT DESKTOP */
 @media (min-width: 1025px) {
     :root {
         font-size: 62.5%;
@@ -52,10 +52,15 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
-    font-family: var(--font-montserrat);
-    color: var(--color-dark);
     -webkit-font-smoothing: antialiased;
+    color: var(--color-dark);
+    font-family: var(--font-montserrat);
+    
 }
 
 a:hover {
@@ -93,11 +98,19 @@ p {
 .expand-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1300px;
+    max-width: 1140px;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
 }
+
+/* BREAKPOINT DESKTOP FULL HD */
+@media (min-width: 1367px) {
+    .expand-container {
+        max-width: 1440px;
+    }
+}
+
 
 .cursiveTxt header h2 {
     font-family: var(--font-fredoka);
@@ -222,7 +235,7 @@ p {
 // */
 .hero {
     align-items: center;
-    padding: 2.4rem 0;
+    padding: 5.4rem 0;
 }
 
 .hero .hero__text .bg-title {
@@ -275,8 +288,9 @@ p {
 }
 
 .hero .hero__text header h3 {
-    font-size: 3.2rem;
     font-family: var(--font-fredoka);
+    font-size: 2.8rem;
+    font-weight: 400;
 }
 
 .hero .hero__text header p {
@@ -284,39 +298,88 @@ p {
 }
 
 .hero .hero__img {
+    margin-bottom: 5rem;
     position: relative;
 }
 
-.hero .hero__img .icon-right .box:first-child:after {
+.hero .hero__img a[data-lity] {
+    display: block;
+    transition: var(--transition2s);
+}
+
+.hero .hero__img a[data-lity]:hover {
+    transform: translateX(-15px);
+    transition: var(--transition2s);
+}
+
+.hero .hero__img .icons-left .box:first-child:after {
     background-image: url(../img/hero-image/womans-icons.png);
     background-size: cover;
-    bottom: -44px;
+    bottom: -20px;
     content: '';
     display: inline-block;
-    height: 154px;
-    left: 56px;
+    height: 94px;
+    left: 3px;
     position: absolute;
-    width: 155px;
+    width: 70px;
+    z-index: 1;
 }
 
-.hero .hero__img .icon-right .box:last-child:after {
+.hero .hero__img .icons-left .box:last-child:after {
     background-image: url(../img/hero-image/man-top-video-hero.png);
     background-size: cover;
-    top: -78px;
     content: '';
     display: inline-block;
-    height: 126px;
-    left: 130px;
+    height: 80px;
     position: absolute;
-    width: 60px;
+    right: 90px;
+    top: -46px;
+    transform: scaleX(-1);
+    width: 38px;
+    z-index: 1;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
-@media (min-width: 769px) {
-    .hero {
-        height: 850px;
-    }
+.hero .hero__img .icons-right .box:first-child {
+    -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+    -webkit-animation-name: floating, float;
+    animation-name: floating, float;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+}
 
+.hero .hero__img .icons-right .box:first-child:after {
+    display: none;
+}
+
+.hero .hero__img .icons-right .box:first-child:before {
+    display: none;
+}
+
+.hero .hero__img .icons-right .man:last-child:after {
+    background-image: url(../img/hero-image/man-computer-floor.png);
+    background-size: cover;
+    bottom: -38px;
+    content: '';
+    display: inline-block;
+    height: 62px;
+    right: 20px;
+    position: absolute;
+    width: 57px;
+}
+
+
+/* BREAKPOINT TABLET */
+@media (min-width: 768px) {
     .hero .hero__text .bg-title:after {
         background-size: 100%;
         right: -42px;
@@ -329,10 +392,6 @@ p {
         top: -35px;
     }
 
-    .hero .hero__text header {
-        text-align: left;
-    }
-
     .hero .hero__text header h2 {
         display: inline-block;
         font-family: var(--font-fredoka);
@@ -340,8 +399,109 @@ p {
         margin: 0;
     }
 
+    .hero .hero__text header h3 {
+        font-size: 3.2rem;
+    }
+
     .hero .hero__text header p {
         font-size: 1.6rem;
+    }
+
+    .hero .hero__img .icons-left .box:first-child:after {
+        background-image: url(../img/hero-image/womans-icons.png);
+        background-size: cover;
+        bottom: -44px;
+        content: '';
+        display: inline-block;
+        height: 154px;
+        left: 56px;
+        position: absolute;
+        width: 155px;
+    }
+
+    .hero .hero__img .icons-left .box:last-child:after {
+        background-image: url(../img/hero-image/man-top-video-hero.png);
+        background-size: cover;
+        top: -78px;
+        content: '';
+        display: inline-block;
+        height: 126px;
+        left: 130px;
+        position: absolute;
+        width: 60px;
+    }
+
+    .hero .hero__img .icons-right .box:first-child:after {
+        bottom: -222px;
+        right: 276px;
+    }
+
+    .hero .hero__img .icons-right .box:first-child:before {
+        right: 30px; 
+        bottom: -170px;
+        font-size: 1.3rem;
+    }
+
+    .hero .hero__img .icons-right .box:first-child:after {
+        background-image: url(../img/hero-image/robo-iGile.png);
+        background-size: cover;
+        bottom: -38px;
+        content: '';
+        display: inline-block;
+        height: 82px;
+        position: absolute;
+        right: 222px;
+        width: 67px;
+        z-index: 1;
+    }
+    
+    .hero .hero__img .icons-right .box:first-child:before {
+        bottom: 20px;
+        color: var(--color-alt-blue);
+        content: 'Olá mundo! \A Sou iGile e posso ajudar você!';
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: absolute;
+        right: 0px; 
+        text-align: left;
+        white-space: pre-wrap;
+    }
+
+    .hero .hero__img .icons-right .man:last-child:after {
+        display: none;
+    }
+}
+
+/* BREAKPOINT TABLET/DESKTOP */
+@media (min-width: 991px) {
+    .hero .hero__img .icons-right .box:first-child:before {
+        color: var(--white);
+    }
+}
+
+/* BREAKPOINT DESKTOP */
+@media (min-width: 1025px) {
+    .hero {
+        height: 850px;
+    }
+
+    .hero .hero__text header {
+        text-align: left;
+    }
+
+    .hero .hero__img .icons-right .box:first-child:after {
+        bottom: -28px;
+        height: 115px;
+        right: 90px;
+        width: 95px;
+    }
+    
+    .hero .hero__img .icons-right .box:first-child:before {
+        bottom: 20px;
+        color: var(--white);
+        font-size: 1.2rem;
+        right: -90px; 
     }
 }
 
@@ -364,7 +524,7 @@ p {
     text-transform: uppercase;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) { 
     .howToBoost {
         padding: 9rem 0;
@@ -425,7 +585,7 @@ p {
     transition: var(--transition4s);
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) { 
     .whatWeDo {
         padding: 8rem 0;
@@ -587,7 +747,7 @@ p {
 
 
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) { 
     .portfolio .list-group li {
         width: auto;
@@ -773,7 +933,7 @@ p {
     font-size: 4.2rem;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) {
     .robustWebsite header h2 {
         font-size: 3.8rem;
@@ -818,7 +978,7 @@ p {
     font-size: 3rem;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) {
     .videoRegister header h2 {
         font-size: 4.4rem;
@@ -845,7 +1005,7 @@ p {
     font-size: 5.2rem;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) {
     .photoRegister header h2 {
         font-size: 4.2rem;
@@ -936,7 +1096,7 @@ p {
     padding: 4px 20px;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) {
     .blog {
         padding-top: 8rem;
@@ -1020,7 +1180,7 @@ p {
 .fiveReasons .fiveReasons__box p::-webkit-scrollbar-thumb:vertical:hover,
 .fiveReasons .fiveReasons__box p::-webkit-scrollbar-thumb:horizontal:hover { background-color: #717171; cursor: pointer; }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) {
     .fiveReasons {
         padding: 6rem 0;
@@ -1124,7 +1284,7 @@ p {
     text-align: center;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) { 
     .testimonial {
         padding: 6.5rem 0;
@@ -1177,7 +1337,7 @@ p {
     max-width: 70%;
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) { 
     .whatsUp img {
         max-width: 100%;
@@ -1240,7 +1400,7 @@ p {
     color: var(--color-primary);
 }
 
-/* BREAKPOINT TABLET-TO-PC */
+/* BREAKPOINT TABLET / DESKTOP */
 @media (min-width: 769px) { 
     .footer .footer__mediaList li a:hover {
         box-shadow: var(--box-shadow);

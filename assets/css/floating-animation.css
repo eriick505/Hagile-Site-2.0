@@ -1,0 +1,19 @@
+@-webkit-keyframes float { 
+  0% { -webkit-transform: translateY(-16px); transform: translateY(-16px); }
+  50% { -webkit-transform: translateY(-11px); transform: translateY(-11px); }
+  100% { -webkit-transform: translateY(-16px); transform: translateY(-16px); }
+}
+
+@keyframes float { 
+  0% { -webkit-transform: translateY(-16px); transform: translateY(-16px); }
+  50% { -webkit-transform: translateY(-11px); transform: translateY(-11px); }
+  100% { -webkit-transform: translateY(-16px); transform: translateY(-16px); }
+}
+
+@-webkit-keyframes floating { 
+  100% { -webkit-transform: translateY(-16px); transform: translateY(-16px); }
+}
+
+@keyframes floating { 
+  100% { transform: translateY(-16px); transform: translateY(-16px); }
+}

@@ -146,7 +146,7 @@
 
                     <div class="col-lg-7 text-center order-0 order-lg-1 mb-5 mb-lg-0">
                         <div class="hero__img">
-                            <div class="icon-right">
+                            <div class="icons-left">
                                 <!-- man above video -->
                                 <div class="box">
                                 </div>
@@ -160,7 +160,15 @@
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/hero-image/video-hero-img.png" alt="ola" class="img-fluid w-75">
                             </a>
 
-                            <div class="icons-left">
+                            <div class="icons-right">
+                                <!-- iGile -->
+                                <a href="#">
+                                    <div class="box">
+                                    </div>
+                                </a>
+
+                                <div class="man">
+                                </div>
                             </div>
                         </div>
                     </div>

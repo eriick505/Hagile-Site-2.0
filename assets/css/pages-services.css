@@ -150,14 +150,12 @@
 }
 
 
-
 /* BREAKPOINT DESKTOP */
 @media (min-width: 1025px) {
   .form-card { 
     margin-top: -348px; 
   }
 }
-
 
 
 /* 
@@ -180,4 +178,96 @@
 
 .endPages .btn {
   border-width: 0.2rem;
+}
+
+/* 
+//
+//
+// LANDING PAGE HAGILIZE
+// */
+:root {
+  --height-main: 67vh;
+  --padding-servico: 5% 50% 3% 2%;
+  --main-color-hagilize: #499cd6;
+  --transition-main-hagilize: all .4s ease-in-out;
+  --box-shadow-hagilize: 1px 1px 16px 8px #0000000e, 5px 5px 5px 5px #0000;
+}
+
+.header-hagilize { background-image: url(../img/background/bg-hagilize.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: var(--height-main); }
+.h-75vh { height: var(--height-main); }
+
+.header-hagilize .title { color: #fff; }
+.header-hagilize .title h2 { font-size: 46px;  }
+
+/* SOBRE NOS */
+.sobre-nos .title h2 { font-size: 38px; }
+.decor h2 { position: relative; display: inline; }
+.decor hr { padding-bottom: 8px; background-color: #f7f7f7; color: #f7f7f7; }
+.decor h2::after { content: ''; position: absolute; bottom: 0; width: 40px; height: 43px; left: -7px; background-color: var(--main-color-hagilize); z-index: -99999; }
+.sobre-nos .title h2 b { font-weight: 700; }
+
+/* SERVIÃ‡OS */
+.servicos .work-card { padding: 14px; border-radius: 8px; box-shadow: var(--box-shadow-hagilize); }
+.servicos .work-card h4 { background: #fff; padding: 8px; display: inline-block; box-shadow: var(--box-shadow-hagilize); }
+.servicos .col-12:nth-child(1) .work-card { background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b); 
+  background: linear-gradient(to right, #ff416c, #ff4b2b); color: #fff; }
+.servicos .col-12:nth-child(1) .work-card h4 { color: #ff3860; } 
+
+.servicos .col-12:nth-child(2) .work-card { background: -webkit-linear-gradient(to bottom, #00b4db, #0196c7); 
+  background: linear-gradient(to right, #00b4db, #0196c7); color: #fff; }
+.servicos .col-12:nth-child(2) .work-card h4 { color: var(--main-color-hagilize); }
+
+.servicos .col-md-4 .work-card { background: -webkit-linear-gradient(to top, #232526, #414345); 
+  background: linear-gradient(to top, #232526, #414345); color: #ffff; }
+.servicos .col-md-4 .work-card  h4 { color: #232526; }
+
+/* VANTAGENS */
+.vantagens ul li i { color: #205d84; }
+
+/* DUVIDAS */
+.duvidas { background-color: #f0f2fc; padding: 38px 0; }
+.duvidas .title h6 { color: var(--main-color-hagilize); }
+.duvidas .title h3 { color: #10275e; font-weight: bold; }
+.duvidas p { color: #8392a1; }
+
+.duvidas .card-doubt { padding: 22px 12px; transition: var(--transition-main-hagilize); display: flex; height: 115px; flex-direction: column; justify-content: center; background: #e7ecff; }
+.duvidas .card-doubt h5 { color: #071e57; display: inline; font-size: 1.8rem; }
+.duvidas .card-doubt a { color: #2775d8; font-weight: bold; display: table-cell; font-size: 1.5rem; }
+.duvidas .card-doubt:hover { background: #fff; border-radius: 6px; box-shadow: var(--box-shadow-hagilize); transition: var(--transition-main-hagilize); transform: translateX(-10px) ;}
+
+/* VAMOS TRABALHAR JUNTOS */
+.vamos-trabalhar { background: -webkit-linear-gradient(to left, #a8c0ff, #3f2b96); background: linear-gradient(to left, #a8c0ff, #3f2b96); padding: 22px 0; }
+.talk-us { background: #499cd6; color: #fff; font-weight: 700; padding: 12px 26px; border-radius: 25px; font-size: 1.6rem; box-shadow: var(--box-shadow-hagilize); }
+.talk-us:hover { background: #ff3860; color: #fff; transition: var(--transition-main-hagilize); }
+
+/* LIST */
+.list { font-size: 1.6rem ;}
+.check i { color: #499cd6; }
+
+/* AJUDA */
+.ajuda { background: #f0f2fc; padding: 22px 0; }
+.ajuda .title h3 { color: #10275e; font-size: 2.4rem; }
+.ajuda .title p { color: #8392a1; }
+.card .card-body { background: #e7ecff; }
+.card a { background-color: #c0dbff; padding: 9px; color: #195c85; }  
+
+
+/* CURSO CAMPEÃƒO */
+.curso-campeao { background: linear-gradient(to left, #373b44, #4286f4); padding: 22px 0; }
+
+/* ESPECIFICO */
+.especifico { background: url(../img/background/videos-hagilize.png); background-size: cover; padding: 28px 0; }
+
+/* 8 ETAPAS */
+.step-by-step { background: -webkit-linear-gradient(to left, #a8c0ff, #3f2b96); background: linear-gradient(to left, #a8c0ff, #3f2b96);  padding: 22px 0; }
+.step-by-step ul li span { background-color: #fff; height: 30px; line-height: 31px; width: 30px; text-align: center; border-radius: 50%; display: inline-block; font-weight: bold; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.021); color: #4286f4; margin-right: 4px; }
+.step-by-step ul li { margin-bottom: 12px; }
+
+
+
+@media (min-width: 768px) {
+  /* SERVICOS */
+  .servicos .item-1 { padding: 6% 1% 4% 56%; }
+  .servicos .space-text { padding: var(--padding-servico); }
+  
 }
