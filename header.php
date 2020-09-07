@@ -32,9 +32,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/manifest.json">
-    <link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png" color="#007ef4">
-    <meta name="msapplication-TileColor" content="#007ef4">
-    <meta name="theme-color" content="#007ef4">
+    <link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png" color="#01beed">
+    <meta name="msapplication-TileColor" content="#01beed">
+    <meta name="theme-color" content="#01beed">
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png" type="image/x-icon">
     <link rel="icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon.ico" type="image/x-icon">
 
@@ -43,7 +43,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1000905822"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){
+        dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-32688820-1');

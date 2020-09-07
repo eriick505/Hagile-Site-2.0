@@ -422,7 +422,7 @@
     </section>
 
     <!-- AUMENTE SUAS VENDAS PELA INTERNET -->
-    <section class="increaseSales cursiveTxt">
+    <section class="increaseSales cursiveTxt" id="estrategia">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
