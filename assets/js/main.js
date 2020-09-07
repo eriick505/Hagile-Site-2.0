@@ -8,6 +8,9 @@ $(document).ready(function () {
       $('#categoria-animated').toggleClass('open');
     })
 
+    // MASCARA TELEFONE
+    $('.telefone').mask('(00) 00000-0000'); 
+
     $('.testimonial__list').slick({
         infinite: true,
         slidesToShow: 2,

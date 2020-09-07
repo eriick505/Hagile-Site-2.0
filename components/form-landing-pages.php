@@ -21,7 +21,7 @@
 
             <div class="form-group">
                 <label for="formTelefone">Telefone <span>*</span></label>
-                <input type="text" class="form-control" name="telefone" id="formTelefone" aria-describedby="telefone" required>
+                <input type="text" class="form-control telefone" name="telefone" id="formTelefone" aria-describedby="telefone" required>
             </div>
 
             <div class="form-group">

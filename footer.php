@@ -1,4 +1,3 @@
-
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
@@ -54,8 +53,9 @@
 
     <!-- ADD FOOTER WORDPRESS -->
     <?php wp_footer(); ?>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
     
+    <!-- MASK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
   </body>
 </html>

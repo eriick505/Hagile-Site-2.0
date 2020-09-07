@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $telefone = $_POST['telefone'];
 			$mensagemCliente = $_POST['mensagem'];
 	
-			$destino = 'santoserick9@gmail.com';
+			$destino = 'contato@hagile.com.br';
 	
 			$assunto = '[CONTATO - SITE] Hagile Agência Digital';
 			$headers = "Content-type:text/html; charset=utf-8";

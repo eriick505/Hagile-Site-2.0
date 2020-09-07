@@ -1,15 +1,15 @@
 <div class="patternForm">
   <form class="form" action="<?php bloginfo('template_url'); ?>/utils/enviar-email.php" id="contact-form" method="post">
     <div class="form-group">
-      <input type="text" name="nome" class="form-control rounded-pill" aria-label="nome" placeholder="Nome ou Empresa">
+      <input type="text" name="nome" class="form-control rounded-pill" aria-label="nome" placeholder="Nome ou Empresa" required>
     </div>
 
     <div class="form-group">
-      <input type="email" name="email" class="form-control rounded-pill" aria-label="e-mail" placeholder="E-mail">
+      <input type="email" name="email" class="form-control rounded-pill" aria-label="e-mail" placeholder="E-mail" required>
     </div>
 
     <div class="form-group">
-      <input type="tel" name="telefone" class="form-control rounded-pill" aria-label="telefone" placeholder="Telefone">
+      <input type="tel" name="telefone" class="form-control rounded-pill telefone" aria-label="telefone" placeholder="Telefone" required>
     </div>
 
     <div class="form-group">
