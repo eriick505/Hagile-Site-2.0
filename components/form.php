@@ -13,6 +13,7 @@
     </div>
 
     <div class="form-group">
+      <label class="sr-only" for="mensagem">Mensagem</label>
       <textarea class="form-control" name="recebemsg" placeholder="Mensagem..." id="mensagem" rows="3"></textarea>
     </div>
 

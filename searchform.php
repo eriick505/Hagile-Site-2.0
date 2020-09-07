@@ -22,6 +22,10 @@
                 echo '<input type="hidden" name="post_type" value="portfolio" />';
             break;
 
+            case 'blog':
+                echo '<input type="hidden" name="post_type" value="post" />';
+            break;
+
             default:
                 echo '<input type="hidden" name="post_type" value="post" />';
                 // echo '<input type="hidden" name="post_type" value="'.$post_slug.'" />';

@@ -38,6 +38,10 @@
       get_template_part('partials/fotos-e-videos');
     break;
 
+    case 'lancamentos-digitais':
+      get_template_part('partials/lancamentos-digitais');
+    break;
+
     default:
       get_404_template();
     break;

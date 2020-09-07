@@ -3,11 +3,76 @@
   <head>
     <!-- Required meta tags -->
     <meta <?php bloginfo('charset'); ?>>
-
+    <meta name="author" content="E.S Design">
+    <meta name="description" content="Somos a Hagile Agência digital, especialista em Criação de Sites, Portais, Lojas Virtuais,  Gerenciamento de redes sociais, Marketing Digital e SEO em Recife."/>
+    <meta name="title" content="Criação de Sites em Recife | Hagile Agência Digital" />
+    <meta name="keywords" content="criação de sites recife, criação de sites em recife, desenvolvimento de sites, desenvolvimento de sites em recife, social media recife, sites recife, sites em recife, criação de site, sites recife, criar loja virtual, criação de website, criar websites, website recife, desenvolvimento de website recife, e-commerce recife, ecommerce recife, criar ecommerce recife, criar e-commerce recife, criação de e-commerce recife, criação de e-commerce em recife, quero criar site em recife" />
+    <meta name="reply-to" content="http://www.hagile.com.br">
+    <meta name="copyright" content="http://www.hagile.com.br" />
+    <meta name="author" content="Hagile | Agência Digital"/>
+    <meta name="creator" content="Hagile | Agência Digital"/>
+    <meta name="creator.adress" content="atendimento@hagile.com.br" />
+    <meta name="resource-type" content="document" />  
+    <meta name="robots" content="index, follow" />
+    <meta name="rating" content="General" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="http://www.hagile.com.br/cover.png">
+    <meta property="og:type" content="website">    
+    <meta property="og:url" content="http://www.hagile.com.br">
+    <meta property="og:title" content="Desenvolvimentos de sites, conteúdo digital, social media, otimização de site SEO | +55 81 3034.4042">
+    <meta property="og:site_name" content="Hagile Agência Digital">
+    <meta property="og:description" content="Somos a Hagile Agência digital, especialista em Criação de Sites, Portais, Lojas Virtuais,  Gerenciamento de redes sociais, Marketing Digital e SEO em Recife.">
+    <meta property="og:image" content="img/hagile.jpg">
+
+    <!-- FAV ICONS -->
+    <link rel="canonical" href="http://www.hagile.com.br/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/manifest.json">
+    <link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png" color="#007ef4">
+    <meta name="msapplication-TileColor" content="#007ef4">
+    <meta name="theme-color" content="#007ef4">
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32688820-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1000905822"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-32688820-1');
+    gtag('config'. 'AW-1000905822');
+    </script>
+
+    <!-- Event snippet for [Lead] Cadastro Hagile conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-1000905822/vdodCK6QobQBEN64ot0D',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
+    <!-- COMMENTS FACEBOOK -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=269793114422068&autoLogAppEvents=1" nonce="mTFx7NDw"></script>
+    
+    <!-- RECAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <!-- ADD HEAD WORDPRESS -->
     <?php wp_head(); ?>

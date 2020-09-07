@@ -114,7 +114,7 @@
 
                 <!-- Lançamentos digitais -->
                 <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <a href="http://">
+                    <a href="lancamentos-digitais">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 64 64" width="512">
                                 <g id="hosting"><path d="m32 19a4 4 0 1 0 -4-4 4 4 0 0 0 4 4zm0-6a2 2 0 1 1 -2 2 2 2 0 0 1 2-2z"/><path d="m31 29h2v2h-2z"/><path d="m31 33h2v7h-2z"/><path d="m57.65 56.37a1 1 0 0 0 -.77-.37h-.88v-27a1 1 0 0 0 -1-1h-6.32l-.69-5.13a.982.982 0 0 0 -.54-.76l-5.49-2.75c-.37-9.43-8.94-16.81-9.31-17.12a1 1 0 0 0 -1.3 0c-.37.31-8.94 7.69-9.31 17.12l-5.49 2.75a.982.982 0 0 0 -.54.76l-.69 5.13h-6.32a1 1 0 0 0 -1 1v27h-.88a1 1 0 0 0 -.77.37.989.989 0 0 0 -.2.84l.87 4a1 1 0 0 0 .98.79h48a1 1 0 0 0 .98-.79l.87-4a.989.989 0 0 0 -.2-.84zm-15.7-34.78 4.13 2.07 1.78 13.34h-2.2l-2.74-6.39a1 1 0 0 0 -.92-.61h-1.67a28.815 28.815 0 0 0 1.62-8.41zm-9.95-17.23c2.01 1.91 8 8.26 8 15.64a25.428 25.428 0 0 1 -2.41 11.31c-.87-3.73-3.01-6.31-5.59-6.31s-4.72 2.58-5.59 6.31a25.428 25.428 0 0 1 -2.41-11.31c0-7.37 5.99-13.72 8-15.64zm0 38.29c-1.27-1.21-4-4.23-4-7.65 0-4.71 2.11-8 4-8s4 3.29 4 8c0 3.42-2.73 6.44-4 7.65zm10-.65v10h-20v-10h6.73a18.636 18.636 0 0 0 2.64 2.78 1.012 1.012 0 0 0 1.26 0 18.636 18.636 0 0 0 2.64-2.78zm-24.08-18.34 4.13-2.07a28.815 28.815 0 0 0 1.62 8.41h-1.67a1 1 0 0 0 -.92.61l-2.74 6.39h-2.2zm-7.92 6.34h5.06l-1.05 7.87a1 1 0 0 0 .24.79.981.981 0 0 0 .75.34h4a1 1 0 0 0 .92-.61l2.74-6.39h1.85a15.5 15.5 0 0 0 1.51 2.46c-.01.18-.02.36-.02.54a10.431 10.431 0 0 0 1.41 5h-6.41a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-12a1 1 0 0 0 -1-1h-6.41a10.431 10.431 0 0 0 1.41-5c0-.18-.01-.36-.02-.54a15.5 15.5 0 0 0 1.51-2.46h1.85l2.74 6.39a1 1 0 0 0 .92.61h4a.981.981 0 0 0 .75-.34 1 1 0 0 0 .24-.79l-1.05-7.87h5.06v26h-19a1 1 0 0 0 -1 1h-4a1 1 0 0 0 -1-1h-19zm45.2 30h-46.4l-.43-2h19.63a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1h19.63z"/><path d="m46 44h6v2h-6z"/><path d="m47 54h4a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1zm1-4h2v2h-2z"/><path d="m12 44h6v2h-6z"/><path d="m17 48h-4a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1zm-1 4h-2v-2h2z"/><path d="m44 8h2v-2h2v-2h-2v-2h-2v2h-2v2h2z"/><path d="m52 14h2v-2h2v-2h-2v-2h-2v2h-2v2h2z"/><path d="m18 8h2v-2h2v-2h-2v-2h-2v2h-2v2h2z"/><path d="m10 14h2v-2h2v-2h-2v-2h-2v2h-2v2h2z"/></g>
@@ -246,7 +246,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="list-group-item list-group-item-action" id="list-social" data-toggle="list" href="#redes-sociais" role="tab" aria-controls="redesSociais">
+                            <a class="list-group-item list-group-item-action" id="list-social" data-toggle="list" href="#redes-sociais" role="tab" aria-controls="redes-sociais">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                     <path d="M296,432h-16V353.6c0-4.419-3.582-8-8-8c-4.419,0-8,3.581-8,8V432H56V272h66.56c4.418,0,8-3.581,8-8c0-4.418-3.582-8-8-8H48  c-4.419,0-8,3.582-8,8v168H24c-4.419,0-8,3.582-8,8v16c0,22.092,17.908,40,40,40h208c22.091,0,40-17.908,40-40v-16  C304,435.582,300.418,432,296,432z M288,456c0,13.255-10.745,24-24,24h-16v-8c0-4.418-3.582-8-8-8c-4.419,0-8,3.582-8,8v8H88v-8  c0-4.418-3.582-8-8-8c-4.419,0-8,3.582-8,8v8H56c-13.255,0-24-10.745-24-24v-8h256V456z"/>
                                     <path d="M432,64h16c4.418,0,8-3.581,8-8c0-4.418-3.582-8-8-8h-16c-13.255,0-24,10.745-24,24v8h-8c-4.419,0-8,3.582-8,8  c0,4.419,3.581,8,8,8h8v24c0,4.419,3.581,8,8,8c4.418,0,8-3.581,8-8V96h8c4.418,0,8-3.581,8-8c0-4.418-3.582-8-8-8h-8v-8  C424,67.582,427.581,64,432,64z"/>
@@ -300,7 +300,7 @@
 
                                         <div class="col-lg-3 col-md-6 col-12 mb-4 text-center">
                                             <article class="portfolio__box">
-                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
+                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener" title="nossos clientes">
                                                     <header>
                                                         <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                                         <div class="box-overlay">
@@ -342,7 +342,7 @@
 
                                         <div class="col-lg-3 col-md-6 col-12 mb-3 text-center">
                                             <article class="portfolio__box">
-                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
+                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener" title="nossos clientes">
                                                     <header>
                                                         <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                                         <div class="box-overlay">
@@ -388,7 +388,7 @@
 
                                         <div class="col-lg-3 col-md-6 col-12 mb-3 text-center">
                                             <article class="portfolio__box">
-                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener">
+                                                <a href="<?php the_field('link_externo_para_projeto'); ?>" target="_blank" rel="noopener" title="nossos clientes">
                                                     <header>
                                                         <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                                                         <div class="box-overlay">

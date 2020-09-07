@@ -1,0 +1,5 @@
+user-agent: *
+allow: /
+disallow: 
+
+sitemap: https://hagile.com.br/projetos/hagilewp/sitemap.xml
