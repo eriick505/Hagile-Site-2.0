@@ -20,14 +20,18 @@
             </div>
 
             <div class="form-group">
-                <label for="formEmail">Mensagem <span>*</span></label>
-                <textarea class="form-control" name="recebemsg" id="mensagem" rows="3"></textarea>
+                <label for="formTelefone">Telefone <span>*</span></label>
+                <input type="text" class="form-control" name="telefone" id="formTelefone" aria-describedby="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="FormMensagem">Mensagem <span>*</span></label>
+                <textarea class="form-control" name="recebemsg" id="FormMensagem" rows="3"></textarea>
             </div>
 
             <div class="g-recaptcha mb-3" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"></div>
 
             <button type="submit" class="btn btn-primary w-100 rounded-pill" onclick="return gtag_report_conversion('https://www.hagile.com.br/impulsione-suas-redes-sociais')" aria-label="comece agora">Comece agora!</button>
-
         </form>
 
         <div class="form-footer text-center mt-3">
