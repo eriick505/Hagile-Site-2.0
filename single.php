@@ -38,7 +38,7 @@
       </div>
 
       <div class="col-12 text-md-left text-center">
-          <a href="#" class="btn btn-primary btn__had"><i class="fas fa-chevron-left"></i> Voltar para as notícias</a>
+          <a href="blog" class="btn btn-primary btn__had"><i class="fas fa-chevron-left"></i> Voltar para as notícias</a>
       </div>
 
       <div class="col-12 my-5">
@@ -61,7 +61,7 @@
           while($my_query_depo->have_posts()) : $my_query_depo->the_post();
       ?>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 mb-3">
               <article class="blog__card" style="background-image: url('<?php the_post_thumbnail_url( $size ); ?>');">
                   <div class="overlay"></div>
                   

@@ -5,7 +5,7 @@
 // SINGLE BLOG
 // */
 .header--single {
-  background-color: #212852;
+  background-color: var(--color-purple);
 }
 
 .header--single .navbar-light .navbar-nav .nav-link {

@@ -170,3 +170,17 @@
   }
 } 
 
+
+/* 
+//
+//
+// SEARCH PAGE 
+// */
+.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.bg-purple header h2 {
+  font-family: var(--font-fredoka);
+  font-size: 2.8rem;
+}

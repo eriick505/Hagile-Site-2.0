@@ -46,8 +46,10 @@
                     echo '<header class="header--single" id="home">';
                 } elseif (is_singular('servico')) {
                     echo '<header class="header--servico" id="home">';
-                } else {
+                } elseif (is_home()) {
                     echo '<header class="header" id="home">';
+                } else {
+                    echo '<header class="header--single" id="home">';
                 }
             break;
         }

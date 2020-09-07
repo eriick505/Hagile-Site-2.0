@@ -9,7 +9,7 @@
 
     <div class="navbar-collapse collapse" id="menuCategorias" style="">
         <ul class="navbar-nav flex-md-column mt-lg-4">
-            <li class="nav-item d-lg-block d-none">
+            <li class="nav-item d-md-block d-none">
                 <div class="search mt-3">
                     <?php get_search_form(); ?>
                 </div>

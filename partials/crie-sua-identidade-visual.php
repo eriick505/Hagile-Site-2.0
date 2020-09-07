@@ -71,7 +71,7 @@
 <div class="section-default red">
     <div class="container">
         <div class="row text-white align-items-center">
-            <div class="col-md-6 text-center wow fadeInLeft">
+            <div class="col-md-6 mb-lg-0 mb-3 text-center wow fadeInLeft">
                 <img class="align-self-center img-fluid" src="<?php bloginfo('template_url'); ?>/assets/img/landing-pages/entrega-rapida.png" alt="Controle de Leads<">
             </div>
 

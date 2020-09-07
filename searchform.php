@@ -23,7 +23,8 @@
             break;
 
             default:
-                echo '<input type="hidden" name="post_type" value="'.$post_slug.'" />';
+                echo '<input type="hidden" name="post_type" value="post" />';
+                // echo '<input type="hidden" name="post_type" value="'.$post_slug.'" />';
             break;
         }
     ?>
