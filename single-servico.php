@@ -18,6 +18,26 @@
       get_template_part('partials/impulsione-suas-redes-sociais');
     break;
 
+    case 'crie-sua-identidade-visual':
+      get_template_part('partials/crie-sua-identidade-visual');
+    break;
+
+    case 'hospedagem':
+      get_template_part('partials/hospedagem');
+    break;
+
+    case 'otimizacao':
+      get_template_part('partials/otimizacao');
+    break;
+
+    case 'links-patrocinados':
+      get_template_part('partials/links-patrocinados');
+    break;
+
+    case 'fotos-e-videos':
+      get_template_part('partials/fotos-e-videos');
+    break;
+
     default:
       get_404_template();
     break;
