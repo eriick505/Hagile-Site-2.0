@@ -48,6 +48,10 @@
         <span>Desenvolvido por nós <i class="fas fa-heart text-danger"></i></span>                                   
     </div>
 
+    <a class="wa" href="https://api.whatsapp.com/send?phone=5581988141162&amp;text=Olá,%20estou%20entrando%20em%20contato%20através%20do%20site,%20você%20poderia%20ajudar?" target="_blank" title="botão do whatsapp">
+        <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ico-whatsapp.png" alt="Botão do WhatsApp">
+    </a>
+
     <!-- ADD FOOTER WORDPRESS -->
     <?php wp_footer(); ?>
 

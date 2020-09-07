@@ -448,7 +448,7 @@
     
                     <footer class="increaseSales__footer">
                         <a href="#cincoMotivos">Mais benefícios</a>
-                        <a href="#" data-toggle="modal" data-target="#formulario">Venda mais!</a>
+                        <a href="#" data-toggle="modal" data-target="#formulario">Vender mais!</a>
                     </footer>
                 </div>
             </div>
@@ -653,7 +653,7 @@
     </section>
     
     <!-- 5 RAZOES -->
-    <section class="fiveReasons cursiveTxt">
+    <section class="fiveReasons cursiveTxt" id="cincoMotivos">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center mb-5">

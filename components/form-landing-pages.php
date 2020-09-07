@@ -8,7 +8,7 @@
     </div>
 
     <div class="form-body">
-        <form class="form" action="enviaContatoCaptcha.php" id="contact-form" method="post">
+        <form class="form" action="<?php bloginfo('template_url'); ?>/utils/enviar-email.php" id="contact-form" method="post">
             <div class="form-group">
                 <label for="formNome">Nome <span>*</span></label>
                 <input type="text" class="form-control" name="nome" id="formNome" aria-describedby="nome" required>
@@ -26,7 +26,7 @@
 
             <div class="form-group">
                 <label for="FormMensagem">Mensagem <span>*</span></label>
-                <textarea class="form-control" name="recebemsg" id="FormMensagem" rows="3"></textarea>
+                <textarea class="form-control" name="mensagem" id="FormMensagem" rows="3"></textarea>
             </div>
 
             <div class="g-recaptcha mb-3" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"></div>

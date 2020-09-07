@@ -1,5 +1,5 @@
 <div class="patternForm">
-  <form class="form" action="enviaContatoCaptcha.php" id="contact-form" method="post">
+  <form class="form" action="<?php bloginfo('template_url'); ?>/utils/enviar-email.php" id="contact-form" method="post">
     <div class="form-group">
       <input type="text" name="nome" class="form-control rounded-pill" aria-label="nome" placeholder="Nome ou Empresa">
     </div>
@@ -14,7 +14,7 @@
 
     <div class="form-group">
       <label class="sr-only" for="mensagem">Mensagem</label>
-      <textarea class="form-control" name="recebemsg" placeholder="Mensagem..." id="mensagem" rows="3"></textarea>
+      <textarea class="form-control" name="mensagem" placeholder="Mensagem..." id="mensagem" rows="3"></textarea>
     </div>
 
     <div class="g-recaptcha mb-2" data-sitekey="6LcYje4UAAAAAFINgIkW70onFmHmwl6uLju7qDxY"></div>

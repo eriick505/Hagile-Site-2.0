@@ -118,13 +118,13 @@
 
 .form-card .form-body { 
   background: var(--white); 
-  border: 1px solid #0000000d; 
+  border: 0.1rem solid #0000000d; 
   box-shadow: var(--box-shadow); 
   padding: 3rem 1.6rem; 
 }  
 
 .form-card form .form-control { 
-  border: 0.2rem solid var(--color-primary);
+  border: 0.1rem solid #33333352;
 } 
 
 .form-card label {
