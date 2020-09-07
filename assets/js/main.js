@@ -62,7 +62,7 @@ $(document).ready(function () {
 
 
     // Adiciona smoth scroll ao navlink dentro do menu
-    $(".nav-link").on('click', function(event) {
+    $("#menuCategorias > ul > li a.nav-link").on('click', function(event) {
       // Certifica que this.hash tem valor antes de substituir o comportamento padrão
       if (this.hash !== "") {
         // Previne o comportamento padrão do clique da âncora
@@ -85,7 +85,7 @@ $(document).ready(function () {
     });
 
     // FECHA O MENU DE CATEGORIAS AO CLICAR 
-    $(".nav-link").on('click', function(){
+    $("#menuCategorias > ul > li a.nav-link").on('click', function(){
       $('#menuCategorias').toggleClass('show');
       $('#categoria-animated').toggleClass('open');
     })

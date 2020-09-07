@@ -21,13 +21,13 @@
 
                 <div class="col-lg-2 col-md-12 text-lg-left text-center mb-5 mb-lg-0">
                     <ul class="footer__siteMap pl-0">
-                        <li><a href="/#home">Home</a></li>
-                        <li><a href="/#solucoes">Soluções</a></li>
-                        <li><a href="/#estrategia">Estratégias</a></li>
-                        <li><a href="portfolio">Portfólio</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/#home">Home</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/#solucoes">Soluções</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/#estrategia">Estratégias</a></li>
+                        <li><a href="portfolios">Portfólio</a></li>
                         <li><a href="clientes">Clientes</a></li>
                         <li><a href="blog">Blog</a></li>
-                        <li><a href="/#contato">Contato</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/#contato">Contato</a></li>
                     </ul>
                 </div>
 

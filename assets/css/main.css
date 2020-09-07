@@ -172,6 +172,19 @@ p {
     color: #000248ad;
 }
 
+.navbar-light .navbar-nav .dropdown-menu {
+    background-color: var(--color-alt-blue);
+    font-size: 1.5rem;
+}
+.navbar-light .navbar-nav .dropdown-item {
+    color: var(--color-light);
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: var(--color-alt-blue);
+}
+
 .socialIcon__list {
     display: none;
     justify-content: center;

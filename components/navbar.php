@@ -35,18 +35,45 @@
         <div class="animated-icon" id="main-animated"><span></span><span></span><span></span><span></span></div>
     </button>
     
-    <?php
-        wp_nav_menu( array(
-            'theme_location'    => 'principal',
-            'depth'             => 2,
-            'container'         => 'div',
-            'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'mainMenu',
-            'menu_class'        => 'navbar-nav ml-auto align-items-end mr-lg-4',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new WP_Bootstrap_Navwalker(),
-        ) );
-    ?>
+    <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto align-items-end mr-lg-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="<?php echo get_site_url(); ?>">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Soluções
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="criacao-de-sites">Criação de sites</a>
+                    <a class="dropdown-item" href="desenvolvimento-de-sistemas">desenvolvimento de sistemas</a>
+                    <a class="dropdown-item" href="impulsione-suas-redes-sociais">Gestão de Redes Sociais</a>
+                    <a class="dropdown-item" href="crie-sua-identidade-visual">Identidade Visual</a>
+                    <a class="dropdown-item" href="lancamentos-digitais">Lançamentos Digitais</a>
+                    <a class="dropdown-item" href="links-patrocinados">Links Patrocinados</a>
+                    <a class="dropdown-item" href="fotos-e-videos">Fotos e Vídeos</a>
+                    <a class="dropdown-item" href="otimizacao">Otimização</a>
+                    <a class="dropdown-item" href="hospedagem">Hospedagem</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo get_site_url(); ?>/#estrategia">Estratégias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolios">Portfólio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clientes">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo get_site_url(); ?>/#contato">Contato</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="socialIcon__list">
         <ul>
             <li>
