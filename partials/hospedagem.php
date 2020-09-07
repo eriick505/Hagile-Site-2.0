@@ -26,7 +26,7 @@
               <h3>Fácil, Rápido e Seguro</h3>
               <p>Aproveite toda a nossa infraestrutura sem limites de contas de e-mail e segurança ao hospedar seu site conosco, lembrando que ao criar seu site conosco você receberá 1 ano de hospedagem grátis.</p>
 
-              <h6 class="h4">Nosso plano de hospedagem oferece:</h6>
+              <h6 class="h2">Nosso plano de hospedagem oferece:</h6>
               <ul class="pl-0">
                   <li><i class="far fa-check-circle"></i> Diretório protegido por senha;</li>
                   <li><i class="far fa-check-circle"></i> Server side includes;</li>
