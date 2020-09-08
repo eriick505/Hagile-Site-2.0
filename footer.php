@@ -57,5 +57,8 @@
     <!-- MASK -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
+    <!-- MODAL FORM -->
+    <?php get_template_part('components/modal-form'); ?>
+
   </body>
 </html>

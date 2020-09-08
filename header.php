@@ -159,7 +159,7 @@
                             </div>
                             
                             <a href="https://www.youtube.com/watch?v=JH3VPrtvS00" data-lity>
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/hero-image/video-hero-img.png" alt="ola" class="img-fluid w-75">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/hero-image/video-hero-img.png" alt="Vídeo de apresentação Hagile Agência Digital" class="img-fluid w-75">
                             </a>
 
                             <div class="icons-right">
