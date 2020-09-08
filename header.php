@@ -80,6 +80,47 @@
     <?php wp_head(); ?>
   </head>
   <body>
+    <div class="fixed-menu">
+        <ul>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/#home">
+                    <span>TOPO</span>
+                </a>
+            </li>
+                        
+            <li>
+                <a href="<?php echo get_site_url(); ?>/#solucoes">
+                    <span>SOLUÇÕES</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="<?php echo get_site_url(); ?>/#estrategia">
+                    <span>ESTRATÉGIAS</span>
+                </a>
+            </li>
+            <li>
+                <a href="portfolios">
+                    <span>PORTFÓLIO</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientes">
+                    <span>CLIENTES</span>
+                </a>
+            </li>
+            <li>
+                <a href="blog">
+                    <span>BLOG</span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/#contato">
+                    <span>CONTATO</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- HEADER -->
     <?php 
