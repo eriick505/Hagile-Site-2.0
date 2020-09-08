@@ -354,7 +354,7 @@
 <!-- MODAIS -->
 <div class="modal fade" id="curso-online" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+      <div class="modal-content text-white">
           <div class="modal-header">
           <h5 class="modal-title h3" id="TituloModalCentralizado">
               Como é a estrutura de um Curso Online?
@@ -383,7 +383,7 @@
 
 <div class="modal fade" id="trafego-organico" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+      <div class="modal-content text-white">
           <div class="modal-header">
           <h5 class="modal-title h3" id="TituloModalCentralizado">
               O que é tráfego Orgânico?
@@ -410,7 +410,7 @@
 
 <div class="modal fade" id="trafego-pago" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+      <div class="modal-content text-white">
           <div class="modal-header">
           <h5 class="modal-title h3" id="TituloModalCentralizado">
               O que é tráfego Pago?
@@ -438,7 +438,7 @@
 
 <div class="modal fade" id="copy" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content text-white">
       <div class="modal-header h3">
       <h5 class="modal-title" id="TituloModalCentralizado">
           O que é Copy?
@@ -464,7 +464,7 @@
 
 <div class="modal fade" id="estrutura-estrategia" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="modal-content text-white">
             <div class="modal-header">
             <h5 class="modal-title h3" id="TituloModalCentralizado">
                 O que é a Estrutura / Estratégia?
@@ -489,7 +489,7 @@
 
 <div class="modal fade" id="conteudo" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+      <div class="modal-content text-white">
           <div class="modal-header">
           <h5 class="modal-title h3" id="TituloModalCentralizado">
               O que é Conteúdo?
@@ -515,7 +515,7 @@
 
 <div class="modal fade" id="obrigacao-produtor" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content text-white">
         <div class="modal-header">
         <h5 class="modal-title h3" id="TituloModalCentralizado">
             Qual é a obrigação do Produtor?
