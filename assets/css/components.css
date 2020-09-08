@@ -146,6 +146,10 @@
 //
 // MENU LATERAL
 */
+.fixed-menu {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .fixed-menu {
         display: block;
