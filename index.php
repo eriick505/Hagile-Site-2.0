@@ -715,7 +715,7 @@
                     </header>
                 </div>
 
-                <div class="col-lg-8 col-md-12 order-lg-0 order-1 wow fadeInLeft">
+                <div class="col-lg-8 col-md-12 order-lg-0 order-1 wow fadeInLeft" data-wow-ofsset="350">
                     <div class="testimonial__list">
 
                         <?php 

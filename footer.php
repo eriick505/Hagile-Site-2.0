@@ -44,7 +44,7 @@
     </footer>
 
     <div class="nos py-3 text-center">
-        <span>Desenvolvido por nós <i class="fas fa-heart text-danger wow pulse" data-wow-iteration="5"></i></span>                                   
+        <span>Desenvolvido por nós <i class="fas fa-heart text-danger wow heartBeat" data-wow-iteration="8"></i></span>                                   
     </div>
 
     <a class="wa" href="https://api.whatsapp.com/send?phone=5581988141162&amp;text=Olá,%20estou%20entrando%20em%20contato%20através%20do%20site,%20você%20poderia%20ajudar?" target="_blank" title="botão do whatsapp">
