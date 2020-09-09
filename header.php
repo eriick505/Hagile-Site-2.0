@@ -83,7 +83,7 @@
 
     <?php
         if(is_page('portfolios') || is_page('clientes')) { } else { ?>
-            <div class="fixed-menu">
+            <div class="fixed-menu" data-wow-delay="0.4s">
                 <ul>
                     <li>
                         <a href="<?php echo get_site_url(); ?>/#home">
@@ -175,7 +175,7 @@
             
                 <!-- HERO MAIN -->
                 <div class="row hero">
-                    <div class="col-lg-5 text-lg-left text-md-center order-1 order-lg-0">
+                    <div class="col-lg-5 text-lg-left text-md-center order-1 order-lg-0 wow fadeInUp" data-wow-delay="0.3s">
                             
                         <div class="hero__text">
                             <header>
@@ -191,7 +191,7 @@
 
                     </div>
 
-                    <div class="col-lg-7 text-center order-0 order-lg-1 mb-5 mb-lg-0">
+                    <div class="col-lg-7 text-center order-0 order-lg-1 mb-5 mb-lg-0 wow fadeInRight" data-wow-delay="0.3s">
                         <div class="hero__img">
                             <div class="icons-left">
                                 <!-- man above video -->
@@ -229,7 +229,7 @@
                         if (is_singular('servico')) {
                     ?> 
                     
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 wow fadeInLeft">
                             <header>
                                 <span>Solução rápida para você</span>
                                 <h2><?php the_field('titulo'); ?></h2>
@@ -239,7 +239,7 @@
 
                     <?php } else { ?>
 
-                        <div class="col-12">
+                        <div class="col-12 wow fadeInLeft">
                             <header>
                                 <h2><?php echo $title; ?></h2>
                                 <p><?php echo $subtitle; ?></p>

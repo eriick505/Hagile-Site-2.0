@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-white.png" alt="logo da hagile versão empilhada" class="img-fluid">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-white.png" alt="logo da hagile versão empilhada" class="img-fluid wow pulse">
 
                     <ul class="footer__mediaList">
                         <li>
@@ -18,7 +18,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-12 text-lg-left text-center mb-5 mb-lg-0">
+                <div class="col-lg-2 col-md-12 text-lg-left text-center mb-5 mb-lg-0 wow fadeIn">
                     <ul class="footer__siteMap pl-0">
                         <li><a href="<?php echo get_site_url(); ?>/#home">Home</a></li>
                         <li><a href="<?php echo get_site_url(); ?>/#solucoes">Soluções</a></li>
@@ -30,7 +30,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-6 text-lg-left text-center">
+                <div class="col-lg-6 text-lg-left text-center wow fadeIn">
                     <address class="footer__address">
                         <ul>
                             <li><i class="fas fa-map-marker-alt"></i> Empresarial Wecon IV - Salas 704 a 706, Rua José Aderval Chaves, Nº 78 - Boa Viagem, Recife - PE, CEP: 51.111-030</li>
@@ -44,7 +44,7 @@
     </footer>
 
     <div class="nos py-3 text-center">
-        <span>Desenvolvido por nós <i class="fas fa-heart text-danger"></i></span>                                   
+        <span>Desenvolvido por nós <i class="fas fa-heart text-danger wow pulse" data-wow-iteration="5"></i></span>                                   
     </div>
 
     <a class="wa" href="https://api.whatsapp.com/send?phone=5581988141162&amp;text=Olá,%20estou%20entrando%20em%20contato%20através%20do%20site,%20você%20poderia%20ajudar?" target="_blank" title="botão do whatsapp">
@@ -54,6 +54,7 @@
     <!-- ADD FOOTER WORDPRESS -->
     <?php wp_footer(); ?>
     
+    <!-- DEPENDENCIES -->
     <!-- MASK -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 

@@ -93,4 +93,7 @@ $(document).ready(function () {
       $('#categoria-animated').toggleClass('open');
     })
 
+    // start wow 
+    new WOW().init();
+
 }); 

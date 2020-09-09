@@ -4,7 +4,7 @@
     <section class="howToBoost cursiveTxt">
         <div class="container">
             <div class="row my-5 align-items-center">
-                <div class="col-lg-6 order-1 order-lg-0">
+                <div class="col-lg-6 order-1 order-lg-0 wow fadeInLeft">
                     <header class="mb-4">
                         <h2>Como a Hagile pode <span>impulsionar suas vendas?</span></h2>
                     </header>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0 text-center">
+                <div class="col-lg-6 order-0 order-lg-1 mb-5 mb-lg-0 text-center wow fadeInRight">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/people-social-icons.png" alt="ilustração com pessoas e icones de redes sociais" class="img-fluid w-75">
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 </div>
 
                 <!-- Criação de site -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="0.2s">
                     <a href="criacao-de-sites">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" fill="#000000" enable-background="new 0 0 517 517" height="512" viewBox="0 0 517 517" width="512">
@@ -47,7 +47,7 @@
                 </div>
 
                 <!-- Desenvolvimento de sistemas -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="0.4s">
                     <a href="desenvolvimento-de-sistemas">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_5" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
@@ -77,7 +77,7 @@
                 </div>
 
                 <!-- Gestão de Redes Sociais -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="0.6s">
                     <a href="impulsione-suas-redes-sociais">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
@@ -101,7 +101,7 @@
                 </div>
 
                 <!-- Identidade Visual -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="0.8s">
                     <a href="crie-sua-identidade-visual">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" id="_x31_" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512">
@@ -113,7 +113,7 @@
                 </div>
 
                 <!-- Lançamentos digitais -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="1s">
                     <a href="lancamentos-digitais">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 64 64" width="512">
@@ -125,7 +125,7 @@
                 </div>
 
                 <!-- Links Patrocinados -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="1.2s">
                     <a href="links-patrocinados">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
@@ -137,7 +137,7 @@
                 </div>
                 
                 <!-- Fotos e Vídeos Profissionais -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="1.4s">
                     <a href="fotos-e-videos">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
@@ -149,7 +149,7 @@
                 </div>
 
                 <!-- Otimização -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="1.6s">
                     <a href="otimizacao">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
@@ -210,7 +210,7 @@
                 </div>
                 
                 <!-- Hospedagem -->
-                <div class="col-lg-4 col-md-6 text-center mb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-3 wow pulse" data-wow-delay="1.8s">
                     <a href="hospedagem">
                         <div class="whatWeDo__box">
                             <svg xmlns="http://www.w3.org/2000/svg" height="496pt" viewBox="0 0 496 496" width="496pt">
@@ -228,7 +228,7 @@
     <section class="portfolio cursiveTxt" id="portfolio">
         <div class="container">
             <div class="row py-4 justify-content-center">
-                <div class="col-lg-8 col-md-12 mb-md-5 mb-3 text-center">
+                <div class="col-lg-8 col-md-12 mb-md-5 mb-3 text-center wow fadeInDown">
                     <header class="mb-4">
                         <h2>Portfólio</h2>
                         <p>Conheça o nosso portfólio desenvolvido durante nossos mais de 20 anos de experiência.</p>
@@ -238,7 +238,7 @@
                 <div class="col-12">
                     <ul class="list-group flex-row justify-content-center" id="list-tab" role="tablist">
                         <li>
-                            <a class="list-group-item list-group-item-action active" id="list-sites" data-toggle="list" href="#sites" role="tab" aria-controls="sites">
+                            <a class="list-group-item list-group-item-action active wow fadeIn" data-wow-delay="0.2s" id="list-sites" data-toggle="list" href="#sites" role="tab" aria-controls="sites">
                                 <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" fill="#000000" enable-background="new 0 0 517 517" height="512" viewBox="0 0 517 517" width="512">
                                     <g><g><path d="m124.895 271.987-8.105 40.716-12.902-41.851c-1.627-5.278-7.226-8.234-12.502-6.61-3.57 1.101-6.072 4.02-6.819 7.426l-12.708 41.073-8.088-40.883c-1.072-5.417-6.329-8.938-11.751-7.869-5.417 1.071-8.941 6.332-7.869 11.75 0 0 14.75 74.366 14.917 74.833 1.666 4.647 6.079 7.745 11.011 7.745.044 0 .089 0 .133-.001 4.976-.056 9.376-3.265 10.95-7.985.022-.068.044-.137.066-.205l13.109-42.37 13.068 42.388c.044.145.092.288.144.431 1.667 4.646 6.074 7.742 10.996 7.742.044 0 .089 0 .134-.001 4.967-.057 9.361-3.266 10.934-7.985.132-.396 14.898-74.439 14.898-74.439 1.078-5.416-2.438-10.682-7.855-11.76-5.42-1.076-10.683 2.438-11.761 7.855z"/><path d="m270.652 275.892c1.078-5.416-2.438-10.682-7.855-11.76-5.417-1.076-10.681 2.438-11.76 7.855l-8.111 40.747-12.895-41.878c-1.625-5.278-7.223-8.237-12.5-6.615-3.573 1.101-6.078 4.021-6.823 7.43l-12.713 41.039-8.082-40.852c-1.072-5.418-6.332-8.945-11.751-7.869-5.417 1.071-8.941 6.333-7.869 11.75 0 0 14.75 74.366 14.918 74.833 1.666 4.646 6.074 7.745 10.997 7.745.043 0 .087 0 .13-.001 4.968-.055 9.363-3.263 10.937-7.982.022-.068.044-.137.066-.205l13.127-42.373 13.051 42.385c.044.146.092.289.144.432 1.666 4.647 6.079 7.745 11.011 7.745.044 0 .089 0 .133-.001 4.977-.056 9.376-3.265 10.95-7.985.129-.397 14.895-74.44 14.895-74.44z"/><path d="m322.271 358.316c.044.001.088.001.132.001 4.922 0 9.331-3.099 10.997-7.745.051-.143.099-.286.144-.432l13.051-42.385 13.127 42.373c.021.068.043.137.066.205 1.574 4.72 5.969 7.928 10.937 7.982.043.001.086.001.13.001 4.922 0 9.331-3.099 10.997-7.745.167-.467 14.918-74.833 14.918-74.833 1.072-5.417-2.452-10.679-7.869-11.75-5.421-1.071-10.679 2.452-11.751 7.869l-8.082 40.852-12.713-41.039c-.746-3.409-3.251-6.33-6.823-7.43-5.28-1.626-10.875 1.335-12.5 6.615l-12.878 41.821-8.1-40.69c-1.078-5.417-6.345-8.93-11.76-7.855-5.417 1.078-8.934 6.344-7.855 11.76 0 0 14.766 74.044 14.898 74.439 1.572 4.722 5.966 7.931 10.934 7.986z"/><path d="m220.474 393.844c-5.523 0-10 4.478-10 10s4.477 10 10 10h.028c5.523 0 9.986-4.478 9.986-10s-4.491-10-10.014-10z"/><path d="m514.071 452.909-47.398-47.398 17.621-17.621c2.76-2.76 3.662-6.873 2.31-10.535-1.352-3.661-4.71-6.201-8.602-6.506l-37.056-2.897v-136.616c0-12.711-10.354-23.053-23.08-23.053h-48.849c3.64-13.24 5.482-26.909 5.482-40.798 0-84.933-69.096-154.03-154.026-154.03s-154.026 69.098-154.026 154.03c0 13.916 1.835 27.584 5.459 40.798h-48.854c-12.711 0-23.052 10.342-23.052 23.053v159.427c0 12.727 10.341 23.081 23.052 23.081h152.671c5.523 0 10-4.478 10-10s-4.477-10-10-10h-152.671c-1.654 0-3.052-1.411-3.052-3.081v-159.427c0-1.654 1.398-3.053 3.052-3.053h274.04c.012 0 .025.002.037.002.015 0 .03-.002.045-.002h58.02c.022 0 .044.003.066.003.026 0 .051-.003.077-.003h62.53c1.669 0 3.08 1.398 3.08 3.053v135.052l-32.925-2.574c-2.908-.229-5.783.832-7.85 2.898-2.067 2.067-3.126 4.936-2.899 7.851l1.507 19.281h-113.556c-5.523 0-10 4.478-10 10s4.477 10 10 10h115.12l3.964 50.702c.304 3.892 2.845 7.25 6.506 8.602 3.66 1.354 7.774.451 10.535-2.31l17.621-17.621 47.397 47.399c1.875 1.875 4.419 2.929 7.071 2.929s5.196-1.054 7.071-2.929l33.563-33.564c3.904-3.906 3.904-10.238-.001-14.143zm-421.304-244.626c-3.188-9.975-5.178-20.281-5.949-30.798h41.96c.39 10.482 1.38 20.782 2.987 30.798zm36.015-50.798h-41.962c1.496-20.19 7.488-39.147 16.971-55.878 9.488 3.739 19.92 6.913 31.014 9.52-3.383 14.683-5.422 30.287-6.023 46.358zm-13.531-72.923c12.785-16.189 29.221-29.365 48.052-38.283-3.314 4.397-6.469 9.199-9.434 14.413-5.38 9.461-9.945 19.944-13.672 31.166-8.86-2.049-17.228-4.485-24.946-7.296zm95.223 123.721h-58.418c-1.75-9.969-2.841-20.272-3.264-30.798h61.682zm0-50.798h-61.692c.622-14.882 2.619-29.171 5.743-42.424 17.844 2.97 36.825 4.643 55.949 5.016zm0-57.439c-17.208-.35-34.281-1.791-50.342-4.332 11.188-32.09 29.484-55.205 50.342-60.892zm20-65.224c20.742 5.656 38.948 28.548 50.152 60.36-15.92 2.688-32.931 4.281-50.152 4.779zm58.392 173.461h-58.392v-30.798h61.679c-.427 10.492-1.526 20.794-3.287 30.798zm-58.392-50.798v-37.494c19.156-.532 38.096-2.368 55.811-5.502 3.203 13.413 5.249 27.9 5.88 42.997h-61.691zm56.604-96.793c-2.965-5.214-6.12-10.017-9.434-14.414 18.443 8.735 34.584 21.557 47.253 37.291-7.508 2.884-15.69 5.398-24.392 7.53-3.681-10.936-8.167-21.157-13.427-30.407zm61.075 147.591h-38.996c1.618-10.045 2.616-20.345 3.009-30.798h41.959c-.775 10.496-2.773 20.803-5.972 30.798zm-35.988-50.798c-.612-16.359-2.706-32.24-6.198-47.151 10.982-2.724 21.256-6.015 30.54-9.867 9.861 17.007 16.091 36.368 17.621 57.018zm161.272 321.917-47.397-47.399c-1.875-1.875-4.419-2.929-7.071-2.929s-5.196 1.054-7.071 2.929l-9.343 9.344-4.431-56.683 56.68 4.432-9.344 9.344c-3.905 3.905-3.905 10.237 0 14.143l47.398 47.398z"/></g></g>
                                 </svg>
@@ -246,7 +246,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="list-group-item list-group-item-action" id="list-social" data-toggle="list" href="#redes-sociais" role="tab" aria-controls="redes-sociais">
+                            <a class="list-group-item list-group-item-action wow fadeIn" data-wow-delay="0.4s" id="list-social" data-toggle="list" href="#redes-sociais" role="tab" aria-controls="redes-sociais">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
                                     <path d="M296,432h-16V353.6c0-4.419-3.582-8-8-8c-4.419,0-8,3.581-8,8V432H56V272h66.56c4.418,0,8-3.581,8-8c0-4.418-3.582-8-8-8H48  c-4.419,0-8,3.582-8,8v168H24c-4.419,0-8,3.582-8,8v16c0,22.092,17.908,40,40,40h208c22.091,0,40-17.908,40-40v-16  C304,435.582,300.418,432,296,432z M288,456c0,13.255-10.745,24-24,24h-16v-8c0-4.418-3.582-8-8-8c-4.419,0-8,3.582-8,8v8H88v-8  c0-4.418-3.582-8-8-8c-4.419,0-8,3.582-8,8v8H56c-13.255,0-24-10.745-24-24v-8h256V456z"/>
                                     <path d="M432,64h16c4.418,0,8-3.581,8-8c0-4.418-3.582-8-8-8h-16c-13.255,0-24,10.745-24,24v8h-8c-4.419,0-8,3.582-8,8  c0,4.419,3.581,8,8,8h8v24c0,4.419,3.581,8,8,8c4.418,0,8-3.581,8-8V96h8c4.418,0,8-3.581,8-8c0-4.418-3.582-8-8-8h-8v-8  C424,67.582,427.581,64,432,64z"/>
@@ -266,7 +266,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="list-group-item list-group-item-action" id="list-fotos" data-toggle="list" href="#fotos" role="tab" aria-controls="fotos">
+                            <a class="list-group-item list-group-item-action wow fadeIn" data-wow-delay="0.6s" id="list-fotos" data-toggle="list" href="#fotos" role="tab" aria-controls="fotos">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
                                     <g id="Outline"><g><path d="M29,48H6V29H41a1,1,0,0,0,1-1V20a1,1,0,0,0-1-1H12.833L40.1,11.693a1,1,0,0,0,.707-1.224L38.739,2.741a1,1,0,0,0-1.224-.707L2.741,11.352a1,1,0,0,0-.707,1.224S4,19.983,4,20a1,1,0,0,0,.293.707L10.586,27H6V26a1,1,0,0,0-2,0V49a1,1,0,0,0,1,1H29a1,1,0,0,0,0-2Zm2.586-21H27.414l-6-6h4.172Zm-3.172-6h4.172l6,6H34.414Zm-3.828,6H20.414l-6-6h4.172ZM40,25.586,35.414,21H40ZM24.7,13.751l-4.029,1.08L24.91,7.482,28.938,6.4ZM31.671,5.67,35.7,4.591l-4.243,7.348-4.029,1.08ZM17.935,15.563l-4.03,1.08,4.243-7.349,4.029-1.08Zm-6.762,1.812L7.144,18.454l4.243-7.349,4.028-1.079ZM34.19,11.207l3.242-5.616,1.187,4.43Zm-25.536.63L5.411,17.454l-1.186-4.43ZM7.414,21h4.172l6,6H13.414Z"/><path d="M29.447,37.1l-10-5A1,1,0,0,0,18,33V43a1,1,0,0,0,1.447.9l10-5a1,1,0,0,0,0-1.79ZM20,41.382V34.618L26.764,38Z"/><path d="M58,58a4,4,0,0,0,4-4,1,1,0,0,0-2,0,2,2,0,0,1-2,2H36a2,2,0,0,1-2-2V44a1,1,0,0,0-2,0V54a4,4,0,0,0,4,4h5v2H34a1,1,0,0,0,0,2H60a1,1,0,0,0,0-2H53V58Zm-7,2H43V58h8Z"/><path d="M58,36H56a2,2,0,0,1-2-2,4,4,0,0,0-4-4H44a4,4,0,0,0-4,4,2,2,0,0,1-2,2H36a4,4,0,0,0-4,4,1,1,0,0,0,2,0,2,2,0,0,1,2-2h2a4,4,0,0,0,4-4,2,2,0,0,1,2-2h6a2,2,0,0,1,2,2,4,4,0,0,0,4,4h2a2,2,0,0,1,2,2V50a1,1,0,0,0,2,0V40A4,4,0,0,0,58,36Z"/><path d="M40,47a7,7,0,1,0,7-7A7.008,7.008,0,0,0,40,47Zm7-5a5,5,0,1,1-5,5A5.006,5.006,0,0,1,47,42Z"/><path d="M47,50a3,3,0,1,0-3-3A3,3,0,0,0,47,50Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,47,46Z"/><path d="M49,36a1,1,0,0,0,0-2H45a1,1,0,0,0,0,2Z"/><circle cx="38" cy="53" r="1"/><path d="M48,22h6a3,3,0,0,0,2.737-1.785l3.02.755A1,1,0,0,0,61,20V14a1,1,0,0,0-1.243-.97l-3.02.755A3,3,0,0,0,54,12H48a3,3,0,0,0-3,3v4A3,3,0,0,0,48,22Zm11-3.281-2-.5V15.781l2-.5ZM47,15a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v4a1,1,0,0,1-1,1H48a1,1,0,0,1-1-1Z"/></g></g>
                                 </svg>
@@ -282,7 +282,7 @@
                 <div class="col-12">
                     <div class="tab-content" id="nav-tabContent">
                         <!-- SITES CONTENT -->
-                        <div class="tab-pane fade show active" id="sites" role="tabpanel" aria-labelledby="list-sites">
+                        <div class="tab-pane fade show active wow fadeInUp" data-wow-delay="0.8s" id="sites" role="tabpanel" aria-labelledby="list-sites">
                             <div class="row">
                                 <?php 
                                     $my_args_depo = array(
@@ -422,10 +422,10 @@
     </section>
 
     <!-- AUMENTE SUAS VENDAS PELA INTERNET -->
-    <section class="increaseSales cursiveTxt" id="estrategia">
+    <section class="increaseSales cursiveTxt wow zoomIn" data-wow-offset="450" id="estrategia">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-8 wow fadeInUp" data-wow-offset="450" data-wow-delay="0.3s">
                     <header>
                         <h2>Aumente suas vendas utilizando a internet!</h2>
                     </header>
@@ -460,7 +460,7 @@
         <div class="container">
             <div class="row py-5">
 
-                <div class="col-12 text-center mb-5">
+                <div class="col-12 text-center mb-5 wow fadeInUp">
                     <header>
                         <h2>Nossos Clientes</h2>
                     </header>
@@ -480,7 +480,7 @@
                     while($my_query_depo->have_posts()) : $my_query_depo->the_post();
                 ?>
 
-                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3">
+                    <div class="col-lg-3 col-md-4 col-6 text-center mb-3 wow fadeIn">
                         <?php $image = get_field('imagem_para_home_principal'); ?>
                         <img src="<?php echo $image['url']; ?>" class="img-fluid" alt="<?php echo $image['alt']; ?>" />
                     </div>
@@ -502,11 +502,11 @@
     <section class="creativeProactive cursiveTxt">
         <div class="container">
             <div class="row align-items-center py-5">
-                <div class="col-md-7">
+                <div class="col-md-7 wow fadeInRight">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/employee.png" alt="folder hagile funcionarios" class="img-fluid">
                 </div>
 
-                <div class="col-lg-5 mt-5 mt-lg-0">
+                <div class="col-lg-5 mt-5 mt-lg-0 wow fadeInRight" data-wow-offset="400" data-wow-delay="0.3s">
                     <header class="mb-4">
                         <h2>Profissionais altamente criativos e proativos!</h2> 
                     </header>
@@ -521,9 +521,9 @@
     </section> 
     
     <!-- SITES ROBUSTOS E ATUALIZADOS -->
-    <section class="robustWebsite cursiveTxt">
+    <section class="robustWebsite cursiveTxt wow fadeInUp" data-wow-offset="400">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center wow fadeInLeft" data-wow-offset="400" data-wow-delay="0.3s">
                 <div class="col-lg-5 order-lg-0 order-1">
                     <header>
                         <h2>Sites robustos <br> e atualizados!</h2>
@@ -534,7 +534,7 @@
                     <p>Todos da equipe trabalham as informações dos clientes, tornando a visualização das páginas atraentes, legíveis e modernas, o que é imprescindível hoje em dia para garantir o sucesso das empresas no mercado atual.</p>
                 </div>
 
-                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4 wow fadeInRight" data-wow-offset="400" data-wow-delay="0.3s">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-site.png" alt="Ilustração de um site" class="img-fluid">
                 </div>
             </div>
@@ -542,10 +542,10 @@
     </section>
     
     <!-- POSICIONAMENTO ESTRATEGICO -->
-    <section class="positionStrategic cursiveTxt">
+    <section class="positionStrategic cursiveTxt wow fadeInUp" data-wow-offset="400">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5 order-lg-0 order-1">
+                <div class="col-lg-5 order-lg-0 order-1 wow fadeInLeft" data-wow-offset="400" data-wow-delay="0.3s">
                     <header>
                         <h2>Posicionamento estratégico nas Redes Sociais!</h2>
                     </header>
@@ -555,7 +555,7 @@
                     <p>Provimento contínuo com conteúdo nas redes sociais; Acompanhamento com geração de relatórios sobre tópicos, quantidade de usuários e controle de conteúdo; Monitoramento da imagem da marca na Web.</p>
                 </div>
 
-                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4 wow fadeInRight" data-wow-offset="400" data-wow-delay="0.3s">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-fotos.png" alt="Ilustração de fotos" class="img-fluid">
                 </div>
             </div>
@@ -563,10 +563,10 @@
     </section>
 
     <!-- REGISTRE SEUS EVENTOS -->
-    <section class="videoRegister cursiveTxt">
+    <section class="videoRegister cursiveTxt wow fadeInUp" data-wow-offset="400">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5 order-lg-0 order-1">
+                <div class="col-lg-5 order-lg-0 order-1 wow fadeInLeft" data-wow-offset="400" data-wow-delay="0.3s">
                     <header>
                         <h2>Registre seus eventos por vídeo...</h2>
                     </header>
@@ -576,7 +576,7 @@
                     <p>A cobertura de eventos em vídeo também ajuda as empresas a mensurarem o alcance do evento e a satisfação do público-alvo em relação à ocasião, pois apresentam imagens reais, em diferentes ângulos e ambientes, sem deixar de lado um fato sequer.</p>
                 </div>
 
-                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4 wow fadeInRight" data-wow-offset="400" data-wow-delay="0.3s">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-videos.png" alt="Ilustração de videos" class="img-fluid">
                 </div>
             </div>
@@ -584,9 +584,9 @@
     </section>
 
     <!-- REGISTRE SUAS FOTOS -->
-    <section class="photoRegister cursiveTxt">
+    <section class="photoRegister cursiveTxt wow fadeInUp" data-wow-offset="400">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center wow fadeInLeft" data-wow-offset="400" data-wow-delay="0.3s">
                 <div class="col-lg-5 order-lg-0 order-1">
                     <header>
                         <h2>... e por fotos!</h2>
@@ -595,7 +595,7 @@
                     <p>A maior parte das taxas de engajamento no Facebook, por exemplo, é obtida por imagens. Levantamentos feitos pela OpenView Marketing Lab revelaram que as atualizações de status com recursos visuais como vídeos e fotos causaram um engajamento muito mais forte, com um percentual acima de 180%. Impressionante, não?</p>
                 </div>
 
-                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4">
+                <div class="col-lg-7 order-lg-1 order-0 mb-lg-0 mb-4 wow fadeInRight" data-wow-offset="400" data-wow-delay="0.3s">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/ilustracao-fotos.png" alt="Ilustração de fotos" class="img-fluid">
                 </div>
             </div>
@@ -606,7 +606,7 @@
     <section class="blog cursiveTxt">
         <div class="expand-container">
             <div class="row justify-content-center">
-                <div class="col-12 text-center mb-5">
+                <div class="col-12 text-center mb-5 wow fadeInUp">
                     <header>
                         <h2>Blog</h2>
                         <p>Confira todas as notícias da Hagile no meio digital</p>
@@ -653,7 +653,7 @@
     </section>
     
     <!-- 5 RAZOES -->
-    <section class="fiveReasons cursiveTxt" id="cincoMotivos">
+    <section class="fiveReasons cursiveTxt wow fadeInLeftBig" data-wow-ofsset="350" id="cincoMotivos">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center mb-5">
@@ -663,35 +663,35 @@
                     </header>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-3">
+                <div class="col-lg-4 col-md-6 mb-3 wow fadeIn" data-wow-ofsset="350" data-wow-delay="0.2s">
                     <article class="fiveReasons__box">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon1.png" alt="Balão 1" class="img-fluid">
                         <p>Planejamos, alteramos e ressaltamos todo o seu projeto mensalmente e acompanhamos os resultados diariamente.</p>
                     </article>
                 </div>
                 
-                <div class="col-lg-4 col-md-6 mb-3">
+                <div class="col-lg-4 col-md-6 mb-3 wow fadeIn" data-wow-ofsset="350" data-wow-delay="0.4s">
                     <article class="fiveReasons__box">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon2.png" alt="Balão 2" class="img-fluid">
                         <p>Temos como meta o aumento do engajamento do seu público consumidor, mostrar seu negócio na internet de forma profissional e assim, aumentar as suas vendas e visibilidade.</p>
                     </article>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-3">
+                <div class="col-lg-4 col-md-6 mb-3 wow fadeIn" data-wow-ofsset="350" data-wow-delay="0.6s">
                     <article class="fiveReasons__box">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon3.png" alt="Balão 3" class="img-fluid">
                         <p>Todo os nossos projetos são discutidos amplamente com o cliente, nós entregamos o que acordamos.</p>
                     </article>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-3">
+                <div class="col-lg-4 col-md-6 mb-3 wow fadeIn" data-wow-ofsset="350" data-wow-delay="0.8s">
                     <article class="fiveReasons__box">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon4.png" alt="Balão 4" class="img-fluid">
                         <p>A melhor tecnologia e expertise para otimizar suas campanhas de anúncios, ads e buscas no Google, 24 horas por dia, além da validação manual periódica pelos nossos especialistas.</p>
                     </article>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-3">
+                <div class="col-lg-4 col-md-6 mb-3 wow fadeIn" data-wow-ofsset="350" data-wow-delay="1s">
                     <article class="fiveReasons__box">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/ballon5.png" alt="Balão 5" class="img-fluid">
                         <p>Fazemos sempre o máximo pelo menor custo, para garantir a satisfação e o retorno rápido do investimento dos nossos clientes.</p>
@@ -715,7 +715,7 @@
                     </header>
                 </div>
 
-                <div class="col-lg-8 col-md-12 order-lg-0 order-1">
+                <div class="col-lg-8 col-md-12 order-lg-0 order-1 wow fadeInLeft">
                     <div class="testimonial__list">
 
                         <?php 
@@ -770,7 +770,7 @@
     <section class="whatsUp cursiveTxt" id="contato">
         <div class="container">
             <div class="row my-5 align-items-center">
-                <div class="col-lg-5 col-md-12 order-lg-0 order-1">
+                <div class="col-lg-5 col-md-12 order-lg-0 order-1 wow fadeInLeft">
                     <header class="mb-4">
                         <h2>E aí, <br> Vamos nessa?</h2>
                     </header>
@@ -778,7 +778,7 @@
                     <?php get_template_part('components/form'); ?>
                 </div>
 
-                <div class="col-lg-7 text-center oder-lg-1 order-0">
+                <div class="col-lg-7 text-center oder-lg-1 order-0 wow fadeInRight">
                     <img src="<?php bloginfo('template_url'); ?>/assets/img/sections-home/homem-patins.png" alt="Figura ilustrativa de um homem andando de patins com icones de redes sociais ao redor" class="img-fluid">
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <!-- social icons phone -->
-<div class="socialIcon__list d-flex d-md-none pt-3">
+<div class="socialIcon__list d-flex d-md-none pt-3 wow fadeInDown" data-wow-delay="0.3s">
     <ul>
         <li>
             <a class="icon-footer" href="https://www.facebook.com/HagileAgenciaDigital" target="_blank" aria-label="facebook da hagile" rel="noopener">
@@ -21,7 +21,7 @@
 
 <!-- MENU PRINCIPAL -->
 <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
-    <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
+    <a class="navbar-brand wow fadeInLeft" href="<?php echo get_site_url(); ?>">
         <?php 
             if(is_home()) {
                 echo '<h1 class="logo--black text-hide m-0">Hagile Agência Digital</h1>';
@@ -35,7 +35,7 @@
         <div class="animated-icon" id="main-animated"><span></span><span></span><span></span><span></span></div>
     </button>
     
-    <div class="collapse navbar-collapse" id="mainMenu">
+    <div class="collapse navbar-collapse wow fadeInRight" id="mainMenu">
         <ul class="navbar-nav ml-auto align-items-end mr-lg-4">
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo get_site_url(); ?>">Home</a>
@@ -74,7 +74,7 @@
         </ul>
     </div>
 
-    <div class="socialIcon__list">
+    <div class="socialIcon__list wow fadeInRight" data-wow-delay="0.4s">
         <ul>
             <li>
                 <a class="icon-footer" href="https://www.facebook.com/HagileAgenciaDigital" target="_blank" aria-label="facebook da hagile" rel="noopener">
