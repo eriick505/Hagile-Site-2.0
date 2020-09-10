@@ -248,8 +248,8 @@
 .ajuda { background: #f0f2fc; padding: 22px 0; }
 .ajuda .title h3 { color: #10275e; font-size: 2.4rem; }
 .ajuda .title p { color: #8392a1; }
-.card .card-body { background: #e7ecff; }
-.card a { background-color: #c0dbff; padding: 9px; color: #195c85; }  
+.ajuda .card .card-body { background: #e7ecff; }
+.ajuda .card a { background-color: #c0dbff; padding: 9px; color: #195c85; }  
 
 
 /* CURSO CAMPEÃƒO */
