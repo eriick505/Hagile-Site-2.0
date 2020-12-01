@@ -1,6 +1,6 @@
 # Hagile Agência Digital
 
-### Tema personalizando desenvolvido para maior gerencimento do site utilizando Wordpress como CMS.
+### Tema personalizado desenvolvido para maior gerencimento do site utilizando Wordpress como CMS.
 
 ## Ferramentas Utilizadas
 
