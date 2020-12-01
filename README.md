@@ -3,5 +3,10 @@
 ### Tema personalizado desenvolvido para maior gerencimento do site utilizando Wordpress como CMS.
 
 ## Ferramentas Utilizadas
-![](assets/img/icons/bootstrap.svg)
+- PHP
+- Wordpress
+- HTML
+- CSS
+- Javascript / Jquery
+- Bootstrap 4.5
 
